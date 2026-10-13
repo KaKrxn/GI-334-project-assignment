@@ -1,0 +1,3 @@
+PASSED
+Native Plain/Tropical faction configuration, UnitDrag/TerrainSlot prefabs, seven ordered Hex slots, OutsideSlot, TownPanel and EXIT button wired in saved Map01.
+Manual dimensions retained; existing assets only. Missing TownMockup replaced by panels; building/resource positions reserved for later weeks.

@@ -1,0 +1,4 @@
+FAILED
+Phase 7: System.InvalidOperationException: Unexpected UI drop target: Hex(Clone)
+  at ColonizationWeek6SmokeTest.Drag (UnitDrag drag, UnityEngine.GameObject target) [0x000cc] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek6SmokeTest.cs:260 
+  at ColonizationWeek6SmokeTest.Tick () [0x00c73] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek6SmokeTest.cs:172 

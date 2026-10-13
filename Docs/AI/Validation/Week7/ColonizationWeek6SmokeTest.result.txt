@@ -1,0 +1,5 @@
+PASSED
+Week 5 regression suite PASSED in the first play session.
+Plain/Tropical Native units, exactly-once Hex unit membership, reserved/capacity-checked animated reboarding and disembarkation, passenger synchronization after ship movement, full/enemy/empty-water guards.
+Enter own-town UI, seven ordered Hex slots, actual GraphicRaycaster drag/drop into fields, occupied/center/cancelled drop guards, field reassignment, worker persistence across close/reopen, return outside, Escape/EXIT, map input blocking and corner/null-neighbor resets.
+Screenshot: Temp/ColonizationWeek6TownPanel.png

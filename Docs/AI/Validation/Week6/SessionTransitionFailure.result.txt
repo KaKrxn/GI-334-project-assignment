@@ -1,0 +1,2 @@
+FAILED
+Play Mode exited before Week 6 completion.

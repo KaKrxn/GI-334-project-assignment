@@ -54,7 +54,13 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.instance != null && GameManager.instance.TownPanelOpen) return;
         MoveByKB();
         ZoomInOut();
+    }
+
+    public void MoveCamera(Vector3 pos)
+    {
+        transform.position = new Vector3(pos.x, pos.y, -10f);
     }
 }

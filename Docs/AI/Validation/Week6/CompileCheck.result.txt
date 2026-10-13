@@ -1,0 +1,6 @@
+PASSED
+2026-10-13: final Week 6 runtime and Editor source compile against actual Unity assembly references.
+Assembly-CSharp exit 0
+Assembly-CSharp-Editor exit 0
+Expected runtime CS0649 warnings concern private serialized fields populated by Unity.
+Native Editor Play Mode validation: ColonizationWeek6SmokeTest.result.txt

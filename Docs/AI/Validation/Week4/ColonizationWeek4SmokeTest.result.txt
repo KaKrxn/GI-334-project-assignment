@@ -1,0 +1,4 @@
+PASSED
+3000 Hexes; even/odd neighbor reciprocity and boundaries; 12 Land/6 Naval initializers; 5 ships and 10 passengers.
+Tab cycle and camera focus; player/enemy clicks; Physics2D raycast selection/right-click movement; three animated moves; costs; terrain/distance/OnBoard/zero-point guards; passenger synchronization; unexplored/visible/seen fog; I toggle.
+Screenshots: Temp/ColonizationWeek4Start.png and Temp/ColonizationWeek4Moved.png

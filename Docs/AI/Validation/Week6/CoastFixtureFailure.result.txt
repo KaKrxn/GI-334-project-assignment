@@ -1,0 +1,7 @@
+FAILED
+Week 5 regression:
+FAILED
+Phase 6: System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <fe644d7ad1cf499ebe4e7ad937bc03bf>:0 
+  at ColonizationWeek5SmokeTest.ValidateDisembarkGuards (GameManager manager) [0x0000d] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek5SmokeTest.cs:363 
+  at ColonizationWeek5SmokeTest.Tick () [0x00419] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek5SmokeTest.cs:150 

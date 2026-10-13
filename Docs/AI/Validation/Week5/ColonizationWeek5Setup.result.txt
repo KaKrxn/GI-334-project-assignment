@@ -1,0 +1,3 @@
+PASSED
+Week 5 Town prefab, Town sorting layer, eight Native faction SOs/instances, 13 ordered faction references and AIManager wired in Map01.
+Existing project artwork only; Week 5 Native preview hides prefab Fog/Dark as specified.

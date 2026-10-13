@@ -1,0 +1,5 @@
+FAILED
+System.InvalidOperationException: Open saved Map01 alone in Edit Mode.
+  at ColonizationWeek7SmokeTest.Preflight () [0x0004b] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek7SmokeTest.cs:52 
+  at ColonizationWeek7SmokeTest.Run () [0x00000] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek7SmokeTest.cs:42 
+  at ColonizationWeek7SmokeTest.Tick () [0x0011a] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek7SmokeTest.cs:73 

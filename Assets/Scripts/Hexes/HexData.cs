@@ -8,6 +8,6 @@ public class HexData : ScriptableObject
     public HexType type;
     public Sprite[] terrainSprites;
     public Sprite[] forestSprites;
-    public int[] resourceYield;
+    public int[] resourceYield = new int[8];
     public int moveCost;
 }

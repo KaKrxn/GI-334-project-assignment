@@ -1,0 +1,5 @@
+FAILED
+Phase 15: System.InvalidOperationException: UI raycast missed.
+  at ColonizationWeek7SmokeTest.Top (UnityEngine.Vector2 position) [0x0003a] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek7SmokeTest.cs:231 
+  at ColonizationWeek7SmokeTest.RightClick (UnityEngine.GameObject obj) [0x00000] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek7SmokeTest.cs:246 
+  at ColonizationWeek7SmokeTest.Tick () [0x013a3] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek7SmokeTest.cs:188 

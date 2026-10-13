@@ -1,21 +1,23 @@
 using TMPro;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-   public enum HexType
-    {
-        Ocean,
-        GrassLand,
-        Prarie,
-        Savanna,
-        Plain,
-        Tundra,
-        Desert,
-        Swamp,
-        Arctic,
-        Hills,
-        Mountain
-    }
-public class Hex : MonoBehaviour
+public enum HexType
+{
+    Ocean,
+    Grassland,
+    Prairie,
+    Savanna,
+    Plain,
+    Tundra,
+    Desert,
+    Swamp,
+    Arctic,
+    Hills,
+    Mountains
+}
+public class Hex : MonoBehaviour, IPointerClickHandler
 {
 
     [SerializeField]
@@ -33,14 +35,17 @@ public class Hex : MonoBehaviour
     [SerializeField]
     private HexType hexType = HexType.Plain;
     public HexType HexTypes { get { return hexType; } }
+    public HexType HexType { get { return hexType; } }
 
 
     [Header("Basic")]
     [SerializeField]
     private SpriteRenderer terrainSprite;
+    public SpriteRenderer TerrainSprite { get { return terrainSprite; } }
 
     [SerializeField]
     private SpriteRenderer forestSprite;
+    public SpriteRenderer ForestSprite { get { return forestSprite; } }
 
     [Header("Fog of War")]
     [SerializeField]
@@ -53,6 +58,14 @@ public class Hex : MonoBehaviour
     [SerializeField]
     private bool hasTown;
     public bool HasTown { get { return hasTown; } set { hasTown = value; } }
+    [SerializeField] private Town town;
+    public Town Town { get { return town; } set { town = value; } }
+    [SerializeField] private List<Unit> unitsInHex = new List<Unit>();
+    public List<Unit> UnitsInHex { get { return unitsInHex; } }
+    [SerializeField] private Unit labor;
+    public Unit Labor { get { return labor; } set { labor = value; } }
+    [SerializeField] private int yieldId = -1;
+    public int YieldID { get { return yieldId; } set { yieldId = value; } }
 
     [Header("River")]
     private bool hasRiver;
@@ -92,6 +105,35 @@ public class Hex : MonoBehaviour
 
     private GameManager gameMgr;
 
+    [SerializeField] protected bool visible;
+    public bool Visible { get { return visible; } set { visible = value; } }
+
+    private void ToggleFog(bool show) { fogSprite.gameObject.SetActive(show); }
+    private void ToggleDark(bool show) { darkSprite.gameObject.SetActive(show); }
+
+    public void DiscoverHex()
+    {
+        ToggleFog(false);
+        ToggleDark(false);
+        visible = true;
+    }
+
+    public void SeenHex()
+    {
+        ToggleFog(true);
+        ToggleDark(false);
+        visible = false;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button != PointerEventData.InputButton.Right || gameMgr == null) return;
+        Unit unit = gameMgr.CurUnit;
+        if (unit != null && unit.Faction == gameMgr.PlayerFaction &&
+            gameMgr.CheckIfHexIsAdjacent(unit.CurHex, this))
+            unit.PrepareMoveToHex(this);
+    }
+
 
     private void RandomTerrainSprite(Sprite[] sprites)
     {
@@ -106,34 +148,61 @@ public class Hex : MonoBehaviour
     }
 
     public void HexInit(int x, int y, Vector2 pos, GameManager gameMgr, int i)
-{
-    this.x = x;
-    this.y = y;
-    this.pos = pos;
-    this.gameMgr = gameMgr;
-
-    hexText.text = $"{x},{y}";
-
-    hexName = gameMgr.HexData[i].hexName;
-    hexType = gameMgr.HexData[i].type;
-    terrainSprites = gameMgr.HexData[i].terrainSprites;
-    forestSprites = gameMgr.HexData[i].forestSprites;
-    resourceYield = gameMgr.HexData[i].resourceYield;
-    moveCost = gameMgr.HexData[i].moveCost;
-
-    RandomTerrainSprite(terrainSprites);
-
-    //85% forest
-    int n = Random.Range(1, 101);
-
-    if (n <= 85)
     {
-       if (forestSprites.Length > 0)
+        this.x = x;
+        this.y = y;
+        this.pos = pos;
+        this.gameMgr = gameMgr;
+        hexText.text = $"{x},{y}";
+
+        // Biome generation can initialize a tile again as Hills/Mountains.
+        ClearForest();
+
+        hexName = gameMgr.HexData[i].hexName;
+        hexType = gameMgr.HexData[i].type;
+        terrainSprites = gameMgr.HexData[i].terrainSprites;
+        forestSprites = gameMgr.HexData[i].forestSprites;
+        resourceYield = gameMgr.HexData[i].resourceYield;
+        moveCost = gameMgr.HexData[i].moveCost;
+        RandomTerrainSprite(terrainSprites);
+
+        // 85% forest, as in the production manual.
+        int n = Random.Range(1, 101);
+        if (n <= 85)
+        {
+            if (forestSprites.Length > 0)
             {
                 RandomForestSprite(forestSprites);
                 hasForest = true;
                 moveCost += 1;
             }
+        }
+        SetSortingOrder();
+    }
+
+    public void ClearForest()
+    {
+        if (hasForest)
+            moveCost -= 1;
+        hasForest = false;
+        forestSprite.gameObject.SetActive(false);
+    }
+
+    private void SetSortingOrder()
+    {
+        int baseOrder = y * -10;
+        terrainSprite.sortingOrder = baseOrder;
+        forestSprite.sortingOrder = baseOrder + 1;
+        fogSprite.sortingOrder = baseOrder + 5;
+        darkSprite.sortingOrder = baseOrder + 6;
+
+        switch (hexType)
+        {
+            case HexType.Arctic:
+            case HexType.Hills:
+            case HexType.Mountains:
+                terrainSprite.sortingOrder = baseOrder + 1;
+                break;
         }
     }
 

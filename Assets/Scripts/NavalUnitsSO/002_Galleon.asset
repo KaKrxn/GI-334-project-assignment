@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38cd9344cd881164a9891772b3d18ae1, type: 3}
+  m_Name: 002_Galleon
+  m_EditorClassIdentifier: Assembly-CSharp::NavalUnitData
+  unitName: Galleon
+  navalUnitType: 2
+  strength: 10
+  movePointMax: 6
+  visualRange: 1
+  shipIcon: {fileID: 21300000, guid: cfd02d0587658f84999d6d2bf0937e96, type: 3}
+  armed: 0
+  cargoHoldNum: 6

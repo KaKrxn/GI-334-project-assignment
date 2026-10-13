@@ -1,0 +1,3 @@
+PASSED
+16 ordered ProductData assets (Food corn/fish), 11 eight-resource terrain configurations, 64x64 YieldIcon, 800x600 profession modal with eight persistent buttons, food total row, warehouse icon/amount labels and header EXIT wired in saved Map01.
+Existing project assets only; Coats uses fur art and Musket uses the existing rifle as temporary proxies.

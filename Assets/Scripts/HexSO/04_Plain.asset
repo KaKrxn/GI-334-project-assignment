@@ -14,7 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HexData
   hexName: Plain
   type: 4
-  terrainSprites: []
-  forestSprites: []
-  resourceYield: 
+  terrainSprites:
+  - {fileID: 21300000, guid: 3d21c1125aea6c94e8f7a7871fb70a73, type: 3}
+  - {fileID: 21300000, guid: d4325b7ef3e73164eadaeeb4b614ecb1, type: 3}
+  - {fileID: 21300000, guid: 96fe6873388382048895e38031e66be6, type: 3}
+  - {fileID: 21300000, guid: da48dc8b24ca43245ba495c2427ca2c2, type: 3}
+  forestSprites:
+  - {fileID: 21300000, guid: ec2ad05803ed9b947af6c1fd6938d96e, type: 3}
+  - {fileID: 21300000, guid: b020015d185fdf14db3882bab90913f5, type: 3}
+  - {fileID: 21300000, guid: 1fc5d94101b31a34b86e300b5917a1b0, type: 3}
+  - {fileID: 21300000, guid: 5d993eec73c3f014eb5478469a970a25, type: 3}
+  resourceYield: 0500000004000000030000000300000003000000030000000000000000000000
   moveCost: 1

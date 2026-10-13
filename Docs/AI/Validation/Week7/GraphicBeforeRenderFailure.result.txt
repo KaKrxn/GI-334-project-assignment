@@ -1,0 +1,4 @@
+FAILED
+Phase 15: System.InvalidOperationException: Worker right-click raycast missed.
+  at ColonizationWeek7SmokeTest.RightClick (UnityEngine.GameObject obj) [0x00062] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek7SmokeTest.cs:249 
+  at ColonizationWeek7SmokeTest.Tick () [0x013a3] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek7SmokeTest.cs:188 

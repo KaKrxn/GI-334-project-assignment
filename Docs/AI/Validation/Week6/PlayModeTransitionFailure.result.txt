@@ -1,0 +1,3 @@
+FAILED
+Phase 0: System.TimeoutException: Week 6 timeout at phase 0
+  at ColonizationWeek6SmokeTest.Tick () [0x0018d] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek6SmokeTest.cs:87 

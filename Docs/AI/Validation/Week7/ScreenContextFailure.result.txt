@@ -1,0 +1,5 @@
+FAILED
+Phase 1: System.InvalidOperationException: UI raycast missed.
+  at ColonizationWeek7SmokeTest.Top (UnityEngine.Vector2 position) [0x0003a] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek7SmokeTest.cs:249 
+  at ColonizationWeek7SmokeTest.Drag (UnitDrag drag, UnityEngine.GameObject target) [0x0005b] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek7SmokeTest.cs:253 
+  at ColonizationWeek7SmokeTest.Tick () [0x006ab] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek7SmokeTest.cs:118 

@@ -1,0 +1,5 @@
+FAILED
+Phase 3: System.InvalidOperationException: Unexpected button raycast: NavalUnit(Clone) for Button2
+  at ColonizationWeek7SmokeTest.Click (UnityEngine.GameObject obj) [0x0007a] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek7SmokeTest.cs:250 
+  at ColonizationWeek7SmokeTest.Choose (System.Int32 id) [0x00014] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek7SmokeTest.cs:245 
+  at ColonizationWeek7SmokeTest.Tick () [0x0091c] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek7SmokeTest.cs:126 

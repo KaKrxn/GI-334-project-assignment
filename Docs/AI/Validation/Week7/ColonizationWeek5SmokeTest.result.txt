@@ -1,0 +1,4 @@
+PASSED
+3000 Hexes, 13 ordered factions, 8 Native nations with 5-9 unique nonadjacent towns each (59 towns), one configured Native unit per town, all 18 unit initializers and Town sprites/sorting.
+Tab/I input, ship and rider movement, EventSystem raycasts, rejected landfall guards, animated disembarkation and cost, P/B repeated-input/tool/terrain guards, delayed clearing/building, two Backspace AI turns, one-step enemy movement, point resets, input blocking, no in-flight handoff, camera focus and cursor restoration.
+Screenshots: Temp/ColonizationWeek5NativeTowns.png and Temp/ColonizationWeek5PlayerTown.png

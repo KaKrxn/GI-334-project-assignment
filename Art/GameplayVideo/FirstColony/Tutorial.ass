@@ -1,0 +1,33 @@
+﻿[Script Info]
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 800
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Tahoma,28,&H00F0E8D8,&H000000FF,&H0015100B,&H0015100B,0,0,0,0,100,100,0,0,1,1,0,2,32,32,16,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:04.00,Default,,0,0,0,,สาธิตเล่นเกม: เริ่มจากเรือใกล้ชายฝั่ง เพื่อฝึกตั้งเมืองแรก
+Dialogue: 0,0:00:04.00,0:00:07.00,Default,,0,0,0,,คลิกขวาช่องทะเลที่ติดกัน เพื่อเดินเรือ (แต้มเดินเริ่มต้น 4)
+Dialogue: 0,0:00:07.00,0:00:10.00,Default,,0,0,0,,แต่ละช่องทะเลใช้ 1 แต้ม เดินกลับอีก 1 ช่อง
+Dialogue: 0,0:00:10.00,0:00:13.00,Default,,0,0,0,,ตอนนี้ใช้ไป 2 แต้ม เดินต่อได้อีก 2 ช่อง
+Dialogue: 0,0:00:13.00,0:00:18.00,Default,,0,0,0,,เดินครบ 4 ช่องแล้ว เรือจะหมดแต้มเดินในเทิร์นนี้
+Dialogue: 0,0:00:18.00,0:00:32.50,Default,,0,0,0,,กด Backspace เพื่อจบเทิร์น แล้วรอ AI เดินให้เสร็จ
+Dialogue: 0,0:00:32.50,0:00:37.50,Default,,0,0,0,,ขึ้นเทิร์นใหม่ แต้มเดินเติมแล้ว กด Tab เลือก Hardy Pioneers บนเรือ
+Dialogue: 0,0:00:37.50,0:00:42.50,Default,,0,0,0,,เลือก Pioneers แล้วคลิกขวาพื้นดินข้างเรือ เพื่อขึ้นฝั่ง
+Dialogue: 0,0:00:42.50,0:00:47.50,Default,,0,0,0,,กด P เพื่อถางป่า ใช้เครื่องมือ 20 หน่วย งานยังไม่เสร็จทันที
+Dialogue: 0,0:00:47.50,0:00:59.75,Default,,0,0,0,,กด Backspace อีกครั้ง งานถางป่าจะเสร็จเมื่อขึ้นเทิร์นใหม่
+Dialogue: 0,0:00:59.75,0:01:04.75,Default,,0,0,0,,พื้นที่โล่งแล้ว พร้อมสร้างเมือง ต้องไม่อยู่ติดเมืองอื่น
+Dialogue: 0,0:01:04.75,0:01:08.75,Default,,0,0,0,,กด B เพื่อเริ่มสร้างเมือง ใช้เครื่องมืออีก 20 หน่วย
+Dialogue: 0,0:01:08.75,0:01:20.25,Default,,0,0,0,,กด Backspace แล้วรอเทิร์นใหม่ เพื่อให้สร้างเมืองเสร็จ
+Dialogue: 0,0:01:20.25,0:01:25.25,Default,,0,0,0,,เมืองแรกสร้างเสร็จแล้ว คลิกซ้ายเมือง หรือกด Enter เพื่อเปิดเมือง
+Dialogue: 0,0:01:25.25,0:01:30.25,Default,,0,0,0,,คนงานว่างอยู่ใน Outside Town ด้านล่างซ้าย
+Dialogue: 0,0:01:30.25,0:01:35.25,Default,,0,0,0,,ลากคนงานจาก Outside Town ลง Hex รอบเมือง แล้วเลือกอาชีพ
+Dialogue: 0,0:01:35.25,0:01:41.25,Default,,0,0,0,,เลือก Farmer หรือ Fisherman เพื่อผลิตอาหาร ดูผลผลิตที่แสดงบน Hex
+Dialogue: 0,0:01:41.25,0:01:52.75,Default,,0,0,0,,ปิดเมืองและกด Backspace เพื่อให้เมืองเก็บผลผลิตประจำเทิร์น
+Dialogue: 0,0:01:52.75,0:01:58.75,Default,,0,0,0,,เปิดเมืองอีกครั้ง อาหารสะสมอยู่ในคลังด้านล่างแล้ว
+Dialogue: 0,0:01:58.75,0:02:04.75,Default,,0,0,0,,ปุ่ม PRODUCTION GUIDE ใช้ดูแผนภาพสายการผลิต
+Dialogue: 0,0:02:04.75,0:02:10.75,Default,,0,0,0,,จำไว้: คลิกซ้ายเลือก คลิกขวาเดิน Tab สลับยูนิต Backspace จบเทิร์น

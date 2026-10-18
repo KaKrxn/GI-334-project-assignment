@@ -27,6 +27,7 @@ public class Town : MonoBehaviour, IPointerClickHandler
     public int CrossNum { get { return crossNum; } set { crossNum = value; } }
     [SerializeField] private int bellNum;
     public int BellNum { get { return bellNum; } set { bellNum = value; } }
+    [SerializeField] private int lastAccumulatedTurn = -1;
 
     public void TownInit(GameManager gameMgr, Faction fact)
     {
@@ -37,6 +38,7 @@ public class Town : MonoBehaviour, IPointerClickHandler
         warehouse = new int[16];
         totalYieldThisTurn = new int[16];
         crossNum = bellNum = 0;
+        lastAccumulatedTurn = -1;
     }
 
     public void RecalculateYield()
@@ -55,9 +57,21 @@ public class Town : MonoBehaviour, IPointerClickHandler
         }
     }
 
+    public void AccumulateToWarehouse()
+    {
+        if (gameManager == null || lastAccumulatedTurn == gameManager.GameTurn) return;
+        RecalculateYield();
+        if (warehouse == null) warehouse = new int[16];
+        else if (warehouse.Length != 16) System.Array.Resize(ref warehouse, 16);
+        for (int i = 0; i < 16; i++) warehouse[i] += totalYieldThisTurn[i];
+        lastAccumulatedTurn = gameManager.GameTurn;
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (curHex != null && eventData.button == PointerEventData.InputButton.Right)
+        if (gameManager == null || curHex == null || faction != gameManager.PlayerFaction) return;
+        if (eventData.button == PointerEventData.InputButton.Left) gameManager.SetupCurrentTown(this);
+        else if (eventData.button == PointerEventData.InputButton.Right)
             curHex.OnPointerClick(eventData);
     }
 }

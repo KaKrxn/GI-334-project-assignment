@@ -8,18 +8,26 @@ public enum Nation
     Spain,
     Netherland,
     Portugal,
-    Sioux,
-    Tupi,
-    Iroquois,
-    Apache,
-    Aztec,
-    Huron,
-    Maya,
+    Powhatan,
+    Taino,
+    Onondaga,
+    Mapuche,
+    Mexica,
+    Wendat,
+    Wampanoag,
     Inca
 }
 
 public class Faction : MonoBehaviour
 {
+    [SerializeField] private int money = 1000;
+    public int Money { get { return money; } set { money = Mathf.Max(0, value); } }
+    [SerializeField] private Sprite leaderSprite;
+    [SerializeField] private bool metByPlayer;
+    [SerializeField] private bool atPeaceWithPlayer = true;
+    public Sprite LeaderSprite { get { return leaderSprite; } }
+    public bool MetByPlayer { get { return metByPlayer; } set { metByPlayer = value; } }
+    public bool AtPeaceWithPlayer { get { return atPeaceWithPlayer; } set { atPeaceWithPlayer = value; } }
     [SerializeField] private Nation nation;
     public Nation Nation { get { return nation; } }
     [SerializeField] private bool isEuropean;
@@ -45,6 +53,9 @@ public class Faction : MonoBehaviour
 
     public void FactionInit(FactionData data)
     {
+        money = 1000;
+        leaderSprite = data.leaderSprite;
+        metByPlayer = false; atPeaceWithPlayer = true;
         nation = data.nation;
         isEuropean = data.isEuropean;
         isTropicalNatives = data.isTropicalNatives;

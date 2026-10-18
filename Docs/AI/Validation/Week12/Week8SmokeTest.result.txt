@@ -1,0 +1,5 @@
+PASSED
+Week 5/6/7 behavioral regression suites passed first.
+Native MainMenu/SelectNation scene references and build order; existing Art Deco sprite crops/borders; 1920x1080 reference layout; disabled Load Game/Option placeholders; GraphicRaycaster/EventSystem New Game, Back, five exclusive nation cards, Start Game and EXIT.
+New Game resets to England; false toggle notifications and invalid IDs cannot overwrite the choice; leader/flag/name mapping matches all five nations; all five complete menu-to-Map01 paths select the correct player ship, passengers, shields and camera, with fresh map/faction state on every game. Invalid map selection falls back to England.
+EXIT returned to Edit Mode. Screenshots: Temp/ColonizationWeek8MainMenu.png, Temp/ColonizationWeek8SelectNation.png, Temp/ColonizationWeek8PortugalMap.png. Existing faction shields temporarily replace missing leader portraits.

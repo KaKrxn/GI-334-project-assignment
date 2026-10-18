@@ -14,7 +14,7 @@ using Object = UnityEngine.Object;
 // session. Coast/town fixtures only relocate units onto existing generated Hexes.
 public static class ColonizationWeek6SmokeTest
 {
-    private const string Request="Temp/ColonizationWeek6SmokeTest.v8.request";
+    private const string Request="Temp/ColonizationWeek6SmokeTest.v9.request";
     private const string Result="Temp/ColonizationWeek6SmokeTest.result.txt";
     private const string Pending="Colonization.Week6Smoke.Pending";
     private const string Regression="Colonization.Week6Smoke.Regression";
@@ -91,7 +91,7 @@ public static class ColonizationWeek6SmokeTest
                 return;
             }
         }
-        if(File.Exists(Request) && !File.Exists(ColonizationWeek6Setup.RequestPath) && !EditorApplication.isPlayingOrWillChangePlaymode && !EditorApplication.isCompiling && !EditorApplication.isUpdating)
+        if(File.Exists(Request) && !File.Exists("Temp/ColonizationEditorRefresh.request") && !File.Exists(ColonizationWeek6Setup.RequestPath) && !EditorApplication.isPlayingOrWillChangePlaymode && !EditorApplication.isCompiling && !EditorApplication.isUpdating)
         {
             string mode=File.ReadAllText(Request).Trim();
             File.Delete(Request);
@@ -102,7 +102,7 @@ public static class ColonizationWeek6SmokeTest
                     Scene scene=SceneManager.GetActiveScene();
                     if(scene.path!="Assets/Scenes/Map01.unity" || scene.isDirty || SceneManager.sceneCount!=1 || !File.ReadAllText("Temp/ColonizationWeek5SmokeTest.result.txt").StartsWith("PASSED"))
                         throw new InvalidOperationException("Extended rerun requires saved Map01 and a passed Week 5 baseline.");
-                    EditorApplication.delayCall+=StartExtended;
+                    SessionState.SetBool(Pending+".StartRequested",true);
                     return;
                 }
                 Run();
@@ -117,10 +117,13 @@ public static class ColonizationWeek6SmokeTest
             if(regression.StartsWith("PASSED") && SessionState.GetBool(Regression+".EditorReady",false))
             {
                 SessionState.SetBool(Regression,false);
-                EditorApplication.delayCall+=StartExtended;
+                SessionState.SetBool(Pending+".StartRequested",true);
                 return;
             }
         }
+        if(SessionState.GetBool(Pending+".StartRequested",false) && !File.Exists("Temp/ColonizationEditorRefresh.request") && !EditorApplication.isPlayingOrWillChangePlaymode && !EditorApplication.isCompiling && !EditorApplication.isUpdating && EditorApplication.timeSinceStartup-editorStableSince>=5)
+        { SessionState.SetBool(Pending+".StartRequested",false); StartExtended(); }
+        if(SessionState.GetBool(Pending,false) && EditorApplication.isPlaying) EditorApplication.QueuePlayerLoopUpdate();
         if(!runtimeReady || !SessionState.GetBool(Pending,false) || !EditorApplication.isPlaying || EditorApplication.isPaused || EditorApplication.timeSinceStartup-started<2) return;
         try
         {
@@ -128,6 +131,7 @@ public static class ColonizationWeek6SmokeTest
             if(EditorApplication.timeSinceStartup-started>180) throw new TimeoutException("Week 6 timeout at phase "+phase);
             if(lastFrame==Time.frameCount) return;
             lastFrame=Time.frameCount; phaseFrame++;
+            if(ColonizationLegacyDialogFixture.AcknowledgeNotice()) return;
             GameManager manager=GameManager.instance;
             switch(phase)
             {
@@ -192,11 +196,14 @@ public static class ColonizationWeek6SmokeTest
                     for(int i=0;i<6;i++) Require(ui.AreaSlots[i].Hex==neighbors[i],"Town Hex order incorrect.");
                     first=ui.AreaSlots.First(s=>s.Hex!=null && !s.Hex.HasTown && s.Hex.Labor==null);
                     second=ui.AreaSlots.First(s=>s!=first && s.Hex!=null && !s.Hex.HasTown && s.Hex.Labor==null);
-                    manager.Endturn(); pioneer.PrepareMoveToHex(first.Hex);
+                    // Week 9 deliberately allows Backspace/Endturn from town;
+                    // that new path has its own turn/warehouse coverage.
+                    if(!ui.HasStockConfiguration) manager.Endturn();
+                    pioneer.PrepareMoveToHex(first.Hex);
                     Require(manager.PlayerTurn && manager.GameTurn==1 && !pioneer.IsMoving,"Map action accepted behind town panel.");
                     cameraPosition=Camera.main.transform.position; zoom=Camera.main.orthographicSize;
                     Canvas.ForceUpdateCanvases(); ScreenCapture.CaptureScreenshot("Temp/ColonizationWeek6BeforeDrag.png");
-                    InputSystem.QueueStateEvent(keyboard,new KeyboardState(Key.W,Key.Z,Key.Tab,Key.Backspace,Key.P,Key.B)); Next(); break;
+                    InputSystem.QueueStateEvent(keyboard,ui.HasStockConfiguration ? new KeyboardState(Key.W,Key.Z,Key.Tab,Key.P,Key.B) : new KeyboardState(Key.W,Key.Z,Key.Tab,Key.Backspace,Key.P,Key.B)); Next(); break;
                 case 7:
                     if(phaseFrame<4) break;
                     Require(Camera.main.transform.position==cameraPosition && Camera.main.orthographicSize==zoom && manager.CurUnit==pioneer && pioneer.ToolsNum==100 && manager.GameTurn==1,"Town UI did not block map keyboard/camera input.");
@@ -244,7 +251,7 @@ public static class ColonizationWeek6SmokeTest
                     ui.ToggleTownPanel(false); manager.SelectPlayerUnit(pioneer); manager.SetupCurrentTown(land.Town); Next(); break;
                 case 11:
                     if(phaseFrame<4) break;
-                    UnityEngine.UI.Button exit=ui.TownPanel.transform.Find("ProductPanel/ExitButton").GetComponent<UnityEngine.UI.Button>();
+                    UnityEngine.UI.Button exit=ui.TownPanel.transform.Find(ui.HasStockConfiguration?"NamePanel/ExitButton":"ProductPanel/ExitButton").GetComponent<UnityEngine.UI.Button>();
                     PointerEventData click=new PointerEventData(EventSystem.current){button=PointerEventData.InputButton.Left};
                     ExecuteEvents.Execute(exit.gameObject,click,ExecuteEvents.pointerClickHandler);
                     Require(!ui.IsTownPanelOpen && ui.AllUnitDrags.Count==0,"EXIT button not wired.");
@@ -263,7 +270,7 @@ public static class ColonizationWeek6SmokeTest
     {
         if(EditorApplication.isPlayingOrWillChangePlaymode) return;
         if(EditorApplication.isCompiling || EditorApplication.isUpdating || EditorApplication.timeSinceStartup-editorStableSince<5)
-        { EditorApplication.delayCall+=StartExtended; return; }
+        { SessionState.SetBool(Pending+".StartRequested",true); return; }
         SessionState.SetBool(Pending,true); runtimeReady=false;
         SessionState.SetBool(Pending+".Entered",false); SessionState.SetInt(Pending+".Phase",0);
         File.WriteAllText(Result,"RUNNING\nWeek 5 passed; entering Week 6 Play Mode.\n");

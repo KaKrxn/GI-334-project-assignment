@@ -1,0 +1,2 @@
+Assembly-CSharp exit 0 Assets\Scripts\Hexes\Hex.cs(104,22): warning CS0649: Field 'Hex.hexText' is never assigned to, and will always have its default value null
+Assembly-CSharp-Editor exit 0 

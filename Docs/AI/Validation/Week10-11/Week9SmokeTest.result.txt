@@ -1,0 +1,6 @@
+PASSED
+Week 5/6/7/8 behavioral regression suites passed first.
+16 native StockSlots and four prefabs; warehouse preview/reopen integrity; two actual Backspace/AI turns accumulate exactly once for all towns and factions; removing a worker stops future yield while existing stock remains; town UI closes/refunds pending stock when ending a turn.
+Owned/enemy town clicks, land-unit visibility, animated friendly-port entry/departure with costs/passenger membership/cargo persistence, rejected enemy/ordinary-land entry, ship selection with two/six holds and empty-town cleanup.
+Actual GraphicRaycaster/EventSystem stock drags: maximum 100, sparse hold indices, same-product partial stack/overflow, full/mixed/invalid/cancelled drops, close/switch refunds and conservation, no duplicate ship/stock icons after repeated reopen.
+Cargo content icons, unloading, Europe travel/trading and consumption/conversion are outside Week 9. Screenshots: Temp/ColonizationWeek9Port.png and Temp/ColonizationWeek9Warehouse.png.

@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-17",
+  "method": "Built-in image_gen; one distinct call per asset; original PNG references from Assets Terrain Referents.zip; generated base tiles used as forest alignment/style references.",
+  "base_prompt": "Generate exactly ONE new 2D HEX terrain sprite, CLEAN FLAT VECTOR-STYLE artwork, using the attached original project tile only as a reference for biome and exact six-sided footprint. Crisp closed shapes, restrained flat color layers, natural muted palette, upper-left light expressed ONLY as hard-edged color shapes. HARD CLEAN CUTOUT, NO OUTER GLOW, NO HAZE, NO FEATHERED EDGES, NO SHADOW outside the hex. No soft brushes, gradients, painted texture or ambient bloom. Entire terrain interior OPAQUE. Truly transparent RGBA PNG outside silhouette, alpha zero; transparent empty space must be empty rather than black/white/checkerboard painted pixels. Portrait canvas 1024x1536. Point-up Hex ground occupies the LOWER 1024x1024 square: vertices (512,512),(1023,768),(1023,1280),(512,1535),(0,1280),(0,768); top512px empty unless upright trees/mountains rise there. Keep full canvas, no autocrop, no centering. Slightly elevated strategy-map view. No 3D extrusion/pedestal, icons, labels, watermark, text, extra Hexes or contact sheet. Ignore RGB streaks in transparent pixels of the input. SUBJECT: ",
+  "forest_prompt": "Create exactly ONE FORESTED HEX game sprite in the same clean flat VECTOR-STYLE as reference image2. Image1 is the original project's forest tree-species/composition reference. Image2 is the generated CLEARED BASE TILE: preserve its exact point-up six-sided ground footprint, ground position, palette, viewpoint and scale, and add the specified forest on it. This is a COMPLETE forest Hex including the matching ground, delivered as its own PNG for the game's separate ForestSprite layer; clearing it should reveal the aligned image2 base. Crisp filled organic shapes, controlled flat color layers, upper-left lighting expressed in simple hard color planes. Ground occupies lower1024x1024 of full portrait1024x1536 canvas (topvertex512,512; sidevertices0/1023 at768 and1280; bottom512,1535). Tree trunks rooted inside that same footprint; upright crowns may rise above its top edge into the upper512px reserved band but nothing is clipped by image edges. True transparent RGBA PNG outside complete plant/ground silhouette, no opaque background or checkerboard. NO halo/glow/haze/outer shadow, labels, text, building, icons, characters, extra Hexes, collage, thick rock slab or floating island. Ignore source RGB streaks in transparent pixels. TREE SUBJECT: ",
+  "files": [
+    {
+      "name": "Ocean",
+      "assignment": 2,
+      "reference": "hexOceanCalm00.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-456d9673-3953-4e61-9ee5-ab8902206e7a.png",
+      "file": "Assignment2/Ocean_01.png"
+    },
+    {
+      "name": "Grassland",
+      "assignment": 2,
+      "reference": "hexPlainsCold00 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-ecbea094-20ec-409c-967b-3b8af3cf1ce6.png",
+      "file": "Assignment2/Grassland_01.png"
+    },
+    {
+      "name": "Prairie",
+      "assignment": 2,
+      "reference": "hexDirt01 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-0ec63823-59ee-4e4f-b31a-eefd30deafa6.png",
+      "file": "Assignment2/Prairie_01.png"
+    },
+    {
+      "name": "Savanna",
+      "assignment": 2,
+      "reference": "hexDesertRedGrass01 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-b9e448e5-d501-4e83-8a4f-44810ffbc9df.png",
+      "file": "Assignment2/Savanna_01.png"
+    },
+    {
+      "name": "Plain",
+      "assignment": 2,
+      "reference": "hexTropicalPlains00 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-433db9d6-f6c2-4da3-a54c-286367c26834.png",
+      "file": "Assignment2/Plain_01.png"
+    },
+    {
+      "name": "Tundra",
+      "assignment": 2,
+      "reference": "hexPlainsColdSnowTransition02 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-0987f24f-8492-48d9-9ed1-f6b565d2ce50.png",
+      "file": "Assignment2/Tundra_01.png"
+    },
+    {
+      "name": "Desert",
+      "assignment": 2,
+      "reference": "hexDesertYellowCactiForest00 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-e98e1fe3-2843-442b-addc-0e132f7ec625.png",
+      "file": "Assignment2/Desert_01.png"
+    },
+    {
+      "name": "Swamp",
+      "assignment": 2,
+      "reference": "hexWetlands00 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-7883128f-f5e6-4b2f-bb5c-67f9e4ed8bed.png",
+      "file": "Assignment2/Swamp_01.png"
+    },
+    {
+      "name": "Arctic",
+      "assignment": 2,
+      "reference": "hexSnowField00 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-9ede2ec2-66c7-4a9c-a991-e8a26b1165e7.png",
+      "file": "Assignment2/Arctic_01.png"
+    },
+    {
+      "name": "Hills",
+      "assignment": 2,
+      "reference": "hexHills01.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-9a908077-6606-4d4a-a9de-8cab5ef7eaa8.png",
+      "file": "Assignment2/Hills_01.png"
+    },
+    {
+      "name": "Mountains",
+      "assignment": 2,
+      "reference": "hexMountain00 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-bacba084-6dd0-481c-bdb7-7ffb6963cae1.png",
+      "file": "Assignment2/Mountains_01.png"
+    },
+    {
+      "name": "ConiferForest",
+      "assignment": 3,
+      "reference": "hexForestPine00 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-6ff29328-356c-4957-94f3-cc67563c00a7.png",
+      "file": "Assignment3/ConiferForest_01.png"
+    },
+    {
+      "name": "BroadleafForest",
+      "assignment": 3,
+      "reference": "hexForestBroadleaf00.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-86d4c896-31f9-46f8-ba03-2c912711e883.png",
+      "file": "Assignment3/BroadleafForest_01.png"
+    },
+    {
+      "name": "SavannaWoodland",
+      "assignment": 3,
+      "reference": "hexDesertRedForest01 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-75cc384c-3669-4608-84e3-1cc1f04b299e.png",
+      "file": "Assignment3/SavannaWoodland_01.png"
+    },
+    {
+      "name": "MixedForest",
+      "assignment": 3,
+      "reference": "hexWoodlands01.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-b8b2d110-0607-4c52-b247-f7d04076ef9f.png",
+      "file": "Assignment3/MixedForest_01.png"
+    },
+    {
+      "name": "BorealForest",
+      "assignment": 3,
+      "reference": "hexForestPineSnowTransition01.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-7b177d6d-b21d-4082-89ea-ec10dac6c753.png",
+      "file": "Assignment3/BorealForest_01.png"
+    },
+    {
+      "name": "ScrubForest",
+      "assignment": 3,
+      "reference": "hexDesertYellowCactiForest00 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-d7b1c32f-a378-4c17-966a-ed5c0f458a2f.png",
+      "file": "Assignment3/ScrubForest_01.png"
+    },
+    {
+      "name": "TropicalRainforest",
+      "assignment": 3,
+      "reference": "hexJungle01.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-51af72b1-9e87-4410-ac2f-e5360184cb7c.png",
+      "file": "Assignment3/TropicalRainforest_01.png"
+    }
+  ]
+}

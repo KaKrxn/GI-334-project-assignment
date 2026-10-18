@@ -15,4 +15,6 @@ MonoBehaviour:
   id: 12
   productName: Coats
   icons:
-  - {fileID: 21300000, guid: 2f66457dc1d196b4db8a7276b07c162a, type: 3}
+  - {fileID: 21300000, guid: 0adb947a591481d4fa1586fe08822155, type: 3}
+  startBid: 13
+  startAsk: 14

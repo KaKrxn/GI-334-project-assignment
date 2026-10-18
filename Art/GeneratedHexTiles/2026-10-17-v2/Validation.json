@@ -1,0 +1,362 @@
+[
+  {
+    "name": "Ocean",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      59,
+      509,
+      966,
+      1504
+    ],
+    "margins_LTRB": [
+      59,
+      509,
+      58,
+      32
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "Grassland",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      63,
+      441,
+      959,
+      1437
+    ],
+    "margins_LTRB": [
+      63,
+      441,
+      65,
+      99
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "Prairie",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      82,
+      492,
+      942,
+      1431
+    ],
+    "margins_LTRB": [
+      82,
+      492,
+      82,
+      105
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "Savanna",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      68,
+      417,
+      956,
+      1380
+    ],
+    "margins_LTRB": [
+      68,
+      417,
+      68,
+      156
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "Plain",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      63,
+      452,
+      961,
+      1455
+    ],
+    "margins_LTRB": [
+      63,
+      452,
+      63,
+      81
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "Tundra",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      58,
+      377,
+      968,
+      1381
+    ],
+    "margins_LTRB": [
+      58,
+      377,
+      56,
+      155
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "Desert",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      76,
+      441,
+      948,
+      1391
+    ],
+    "margins_LTRB": [
+      76,
+      441,
+      76,
+      145
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "Swamp",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      43,
+      437,
+      986,
+      1446
+    ],
+    "margins_LTRB": [
+      43,
+      437,
+      38,
+      90
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "Arctic",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      183,
+      405,
+      845,
+      1178
+    ],
+    "margins_LTRB": [
+      183,
+      405,
+      179,
+      358
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "Hills",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      66,
+      475,
+      959,
+      1486
+    ],
+    "margins_LTRB": [
+      66,
+      475,
+      65,
+      50
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "Mountains",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      58,
+      357,
+      970,
+      1452
+    ],
+    "margins_LTRB": [
+      58,
+      357,
+      54,
+      84
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "ConiferForest",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      80,
+      327,
+      970,
+      1428
+    ],
+    "margins_LTRB": [
+      80,
+      327,
+      54,
+      108
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "BroadleafForest",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      33,
+      298,
+      995,
+      1459
+    ],
+    "margins_LTRB": [
+      33,
+      298,
+      29,
+      77
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "SavannaWoodland",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      44,
+      351,
+      980,
+      1433
+    ],
+    "margins_LTRB": [
+      44,
+      351,
+      44,
+      103
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "MixedForest",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      52,
+      258,
+      974,
+      1410
+    ],
+    "margins_LTRB": [
+      52,
+      258,
+      50,
+      126
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "BorealForest",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      46,
+      191,
+      980,
+      1477
+    ],
+    "margins_LTRB": [
+      46,
+      191,
+      44,
+      59
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "ScrubForest",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      39,
+      358,
+      987,
+      1445
+    ],
+    "margins_LTRB": [
+      39,
+      358,
+      37,
+      91
+    ],
+    "passed_no_visible_canvas_contact": true
+  },
+  {
+    "name": "TropicalRainforest",
+    "size": [
+      1024,
+      1536
+    ],
+    "alpha_gt_8_bbox": [
+      34,
+      272,
+      996,
+      1459
+    ],
+    "margins_LTRB": [
+      34,
+      272,
+      28,
+      77
+    ],
+    "passed_no_visible_canvas_contact": true
+  }
+]

@@ -4,6 +4,32 @@ public enum HexDirection { TopLeft, TopRight, Right, BottomRight, BottomLeft, Le
 
 public static class HexCalculator
 {
+    // The manual uses three preferred directions, not a full pathfinding search.
+    public static Hex FindNextHexToGo(Unit unit, Hex current, Hex destination, Hex[,] hexes)
+    {
+        if (unit == null || current == null || destination == null || current == destination || unit.MovePoint <= 0) return null;
+        HexDirection[] directions;
+        if (destination.Y > current.Y) directions = destination.X <= current.X ?
+            new[] { HexDirection.TopLeft, HexDirection.TopRight, HexDirection.Left } : new[] { HexDirection.TopRight, HexDirection.TopLeft, HexDirection.Right };
+        else if (destination.Y < current.Y) directions = destination.X >= current.X ?
+            new[] { HexDirection.BottomRight, HexDirection.Right, HexDirection.BottomLeft } : new[] { HexDirection.BottomLeft, HexDirection.BottomRight, HexDirection.Left };
+        else directions = destination.X > current.X ? new[] { HexDirection.Right, HexDirection.TopRight, HexDirection.BottomRight } : new[] { HexDirection.Left, HexDirection.BottomRight, HexDirection.BottomLeft };
+        foreach (HexDirection direction in directions)
+        {
+            Hex next = FindHexByDir(current, direction, hexes);
+            if (next == null || next.MoveCost <= 0 || next.MoveCost > unit.MovePoint) continue;
+            if (unit.UnitType == UnitType.Naval ? next.HexType == HexType.Ocean : next.HexType != HexType.Ocean) return next;
+        }
+        return null;
+    }
+    public static Faction CheckNeverMetFaction(Hex[,] hexes, Unit playerUnit)
+    {
+        if (playerUnit == null || playerUnit.CurHex == null) return null;
+        foreach (Hex hex in GetHexAround(hexes,playerUnit.CurHex))
+            foreach (Unit other in hex.UnitsInHex)
+                if (other != null && !other.IsDead && other.Faction != playerUnit.Faction && !other.Faction.MetByPlayer) return other.Faction;
+        return null;
+    }
     public static Hex FindHexByDir(Hex center, HexDirection dir, Hex[,] hexes)
     {
         if (center == null || hexes == null) return null;

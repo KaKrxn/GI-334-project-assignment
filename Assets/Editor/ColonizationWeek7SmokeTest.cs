@@ -109,6 +109,7 @@ public static class ColonizationWeek7SmokeTest
             if(error!=null) throw new InvalidOperationException(error);
             if(EditorApplication.timeSinceStartup-started>240) throw new TimeoutException("Week 7 phase "+phase);
             if(lastFrame==Time.frameCount) return; lastFrame=Time.frameCount; frames++;
+            if(ColonizationLegacyDialogFixture.AcknowledgeNotice()) return;
             switch(phase)
             {
                 case 0:

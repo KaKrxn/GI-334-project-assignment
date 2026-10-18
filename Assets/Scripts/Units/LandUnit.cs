@@ -103,6 +103,8 @@ public class LandUnit : Unit
             boardingShip.ReleaseBoarding(this);
             boardingShip = null;
         }
+        if (faction == gameMgr.PlayerFaction) gameMgr.CheckUnmetFaction(this);
+        if (faction != gameMgr.PlayerFaction && destinationHex != null) CheckMoveToDestination();
     }
 
     protected override void OnDestroy()
@@ -114,31 +116,32 @@ public class LandUnit : Unit
 
     private bool CanStartWork()
     {
-        return gameMgr != null && gameMgr.PlayerTurn && !gameMgr.TownPanelOpen && faction == gameMgr.PlayerFaction &&
+        return gameMgr != null && gameMgr.PlayerTurn && !gameMgr.MapInputBlocked && faction == gameMgr.PlayerFaction &&
             curHex != null && !isMoving && unitStatus == UnitStatus.None;
     }
 
     public void ClearingLand()
     {
-        if (!CanStartWork()) return;
+        if (!CanStartWork() || landUnitType != LandUnitType.HardyPioneers) return;
         if (curHex.HexType == HexType.Ocean || curHex.HexType == HexType.Mountains ||
             curHex.HexType == HexType.Hills || !curHex.HasForest)
             Debug.Log("Must be on Forest");
-        else if (toolsNum < 20) Debug.Log("Not enough tools");
-        else { unitStatus = UnitStatus.Clearing; toolsNum -= 20; }
+        else if (toolsNum < 20) { if (DialogManager.instance != null) DialogManager.instance.ShowColonyNotEnoughToolsText(toolsNum); }
+        else { UnitStatus = UnitStatus.Clearing; toolsNum -= 20; }
     }
 
     public void BuildSettlement()
     {
-        if (!CanStartWork() || curHex.HasTown) return;
+        if (!CanStartWork() || curHex.HasTown || landUnitType != LandUnitType.HardyPioneers) return;
         if (curHex.HexType == HexType.Ocean || curHex.HexType == HexType.Mountains || curHex.HasForest)
-            Debug.Log("Must be on Cleared Land");
-        else if (toolsNum < 20) Debug.Log("Not enough tools");
+        { if (DialogManager.instance != null) DialogManager.instance.ShowColonyClearLandText(); }
+        else if (toolsNum < 20) { if (DialogManager.instance != null) DialogManager.instance.ShowColonyNotEnoughToolsText(toolsNum); }
+        else if (gameMgr.CheckIfAroundHexHasTown(curHex)) { if (DialogManager.instance != null) DialogManager.instance.ShowColonyHasOtherTownAround(); }
         else
         {
             foreach (Unit other in faction.Units)
                 if (other != this && other.CurHex == curHex && other.UnitStatus == UnitStatus.Building) return;
-            unitStatus = UnitStatus.Building;
+            UnitStatus = UnitStatus.Building;
             toolsNum -= 20;
         }
     }
@@ -146,7 +149,7 @@ public class LandUnit : Unit
     protected override void Update()
     {
         base.Update();
-        if (Keyboard.current == null || this != gameMgr.CurUnit || !gameMgr.PlayerTurn || gameMgr.TownPanelOpen || isMoving) return;
+        if (Keyboard.current == null || this != gameMgr.CurUnit || !gameMgr.PlayerTurn || gameMgr.MapInputBlocked || isMoving) return;
         if (Keyboard.current.bKey.wasPressedThisFrame) BuildSettlement();
         if (Keyboard.current.pKey.wasPressedThisFrame) ClearingLand();
     }

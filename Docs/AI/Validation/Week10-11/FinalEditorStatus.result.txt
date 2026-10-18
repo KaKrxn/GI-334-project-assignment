@@ -1,0 +1,3 @@
+playing=False; changing=False; paused=False; compiling=False; updating=False
+active=Assets/Scenes/Map01.unity; dirty=False; count=1
+Assets/Scenes/Map01.unity dirty=False loaded=True

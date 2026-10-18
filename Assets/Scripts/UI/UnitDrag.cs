@@ -11,12 +11,21 @@ public class UnitDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     [SerializeField] private TerrainSlot terrainSlot;
     public TerrainSlot TerrainSlot { get { return terrainSlot; } }
     public bool IsDragging { get; private set; }
+    [SerializeField] private UnityEngine.UI.Image statusIcon;
+    public UnityEngine.UI.Image StatusIcon { get { return statusIcon; } }
+    public void CheckStatusIcon()
+    {
+        if (statusIcon == null || landUnit == null) return;
+        bool show = landUnit.UnitStatus == UnitStatus.ToBoard && landUnit.StatusSpritesList != null && landUnit.StatusSpritesList.Length > 2;
+        statusIcon.sprite = show ? landUnit.StatusSpritesList[2] : null; statusIcon.gameObject.SetActive(show);
+    }
 
     public void UnitInit(LandUnit unit)
     {
         landUnit = unit;
         unitImage.sprite = unit.UnitSprite.sprite;
         iconParent = transform.parent;
+        CheckStatusIcon();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -59,5 +68,6 @@ public class UnitDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         if (eventData.button == PointerEventData.InputButton.Right && terrainSlot != null && UIManager.instance != null && UIManager.instance.CanAssign(this))
             UIManager.instance.SelectProfession(terrainSlot);
+        else if (eventData.button == PointerEventData.InputButton.Right && UIManager.instance != null) UIManager.instance.OpenUnitOrders(this);
     }
 }

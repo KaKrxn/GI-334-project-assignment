@@ -15,4 +15,6 @@ MonoBehaviour:
   id: 9
   productName: Rum
   icons:
-  - {fileID: 21300000, guid: c418277e8e3ed9d409d6ea60a09ec4f6, type: 3}
+  - {fileID: 21300000, guid: ff64d242a8444dc4fbac270174bd688c, type: 3}
+  startBid: 13
+  startAsk: 14

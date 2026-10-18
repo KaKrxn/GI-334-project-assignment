@@ -1,0 +1,16 @@
+Six naval game icons. Transparent RGBA PNG, 256x256, plus original-resolution images.
+Historically inspired game interpretations, not exact naval reconstructions. Rigging and proportions are stylized.
+Caravel: early1500s lateen-rigged Iberian vessel.
+Merchantman: seventeenth-century Dutch fluyt-inspired cargo vessel.
+Galleon: circa1580-1620 Atlantic galleon.
+Privateer: circa1640-1670 armed pinnace interpretation. Privateer denotes licensed wartime activity, not a fixed hull type.
+Frigate: circa1660 two-decker interpretation; terminology differs from later frigates.
+Man Of War: large three-decker inspired by Sovereign of the Seas1637. Man-of-war is a broad warship term.
+
+Research sources:
+https://www.rmg.co.uk/collections/objects/rmgc-object-66266
+https://www.rijksmuseum.nl/en/collection/node/Transport-by-Water--0549b4fece1a448290a1949dd76f1e76
+https://www.rmg.co.uk/collections/objects/rmgc-object-138270
+https://www.rmg.co.uk/collections/research-guides/research-guide-k1-pirates-privateers
+https://www.rmg.co.uk/collections/objects/rmgc-object-66329
+https://www.rmg.co.uk/collections/objects/rmgc-object-66317

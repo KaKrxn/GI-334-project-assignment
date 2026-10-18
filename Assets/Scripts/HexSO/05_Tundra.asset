@@ -15,14 +15,8 @@ MonoBehaviour:
   hexName: Tundra
   type: 5
   terrainSprites:
-  - {fileID: 21300000, guid: c4be55aab82e6c248bc6c7d61a47c8d4, type: 3}
-  - {fileID: 21300000, guid: f6e78e02448efd6429e4ae943e07a205, type: 3}
-  - {fileID: 21300000, guid: d120eda3af033c74da88db17c08ff05c, type: 3}
-  - {fileID: 21300000, guid: 9e25d78cae1cf4c449e1fd60bc30a78a, type: 3}
+  - {fileID: 21300000, guid: 40c6f7786d423f94a980bad5463482a6, type: 3}
   forestSprites:
-  - {fileID: 21300000, guid: 89ab31f4a496fa3469ede0ce28a8a505, type: 3}
-  - {fileID: 21300000, guid: 9d5dcc14f90f7a2408747aaa97f7cccb, type: 3}
-  - {fileID: 21300000, guid: 2cdef36111349644497d3a02288a2475, type: 3}
-  - {fileID: 21300000, guid: 49135156e0218f34b9e5a12c150af88d, type: 3}
+  - {fileID: 21300000, guid: 95e0ff7efe2cef340be8ff9721076090, type: 3}
   resourceYield: 0200000000000000000000000000000006000000040000000000000000000000
   moveCost: 1

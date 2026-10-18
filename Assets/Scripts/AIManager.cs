@@ -12,6 +12,12 @@ public class AIManager : MonoBehaviour
 
     private void AutoMoveToHex(Unit unit)
     {
+        unit.ShowHideSprite(true);
+        if (unit.DestinationHex != null) unit.CheckMoveToDestination();
+        else RandomMoveOneHex(unit);
+    }
+    public void RandomMoveOneHex(Unit unit)
+    {
         Hex target = HexCalculator.FindHexByDir(unit.CurHex, (HexDirection)Random.Range(0, 6), GameManager.instance.AllHexes);
         if (target == null) return;
         unit.ShowHideSprite(true);
@@ -26,6 +32,7 @@ public class AIManager : MonoBehaviour
         previousCursorVisible = Cursor.visible;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        if (DialogManager.instance != null) DialogManager.instance.ToggleAiMoveDialog(true);
         StartCoroutine(EnemyUnitMoves());
     }
 
@@ -38,10 +45,12 @@ public class AIManager : MonoBehaviour
             if (fact == manager.PlayerFaction) continue;
             foreach (Unit unit in fact.Units)
             {
-                if (unit.UnitStatus == UnitStatus.OnBoard) continue;
+                if (unit == null || unit.IsDead || unit.CurHex == null || unit.UnitStatus == UnitStatus.OnBoard) continue;
                 manager.SelectAiUnit(unit);
                 if (unit.Visible) CameraController.instance.MoveCamera(unit.CurPos);
                 AutoMoveToHex(unit);
+                // Keep authority on this unit until its chained destination moves finish.
+                if (unit.DestinationHex != null) while (unit != null && unit.IsMoving) yield return null;
                 yield return new WaitForSeconds(0.1f);
                 manager.ClearToggleBorder(unit);
             }
@@ -55,8 +64,8 @@ public class AIManager : MonoBehaviour
         manager.GameTurn++;
         RestoreCursor();
         IsRunning = false;
-        manager.PlayerTurn = true;
-        manager.SelectPlayerFirstUnit();
+        if (DialogManager.instance != null) DialogManager.instance.ToggleAiMoveDialog(false);
+        manager.StartNewTurn();
     }
 
     private void RestoreCursor()
@@ -67,7 +76,7 @@ public class AIManager : MonoBehaviour
 
     private void OnDisable()
     {
-        if (IsRunning) { StopAllCoroutines(); RestoreCursor(); IsRunning = false; }
+        if (IsRunning) { StopAllCoroutines(); RestoreCursor(); IsRunning = false; if (DialogManager.instance != null) DialogManager.instance.ToggleAiMoveDialog(false); }
         if (instance == this) instance = null;
     }
 }

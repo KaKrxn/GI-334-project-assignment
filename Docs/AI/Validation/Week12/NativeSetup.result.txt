@@ -1,0 +1,2 @@
+PASSED
+Ten ordered Dialog references, 1200x650 CombatPanel with three 600x140 rows per side, 1024x717 naval/foreign/advisor dialogs, exact manual text/actions, native button wiring and all thirteen leader references saved through Unity APIs. Existing project ship/unit/shield sprites substitute missing portraits/background downloads. Other advisor panels are reserved inactive; no Week 13 systems added.

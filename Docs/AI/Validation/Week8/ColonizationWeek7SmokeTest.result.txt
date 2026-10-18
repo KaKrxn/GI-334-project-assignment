@@ -1,0 +1,6 @@
+PASSED
+Week 5/6 behavioral regression passed first.
+16 ProductData entries, all 11 eight-resource terrain configurations, Food corn/fish variants, terrain/forest/town rounding and nonnegative rules.
+Auto center Food, actual GraphicRaycaster drop and all eight persistent profession buttons, label/icon correctness, modal blocking and invalid-ID guards, zero-yield professions, Food/other-product replacement without double counts, two-worker totals, occupied/center/cancelled drop guards, return outside, spacing reset, Escape cancellation, worker/yield persistence across repeated reopen and switching cities, null neighbors, header EXIT and visual cleanup.
+Warehouse remains unchanged by production previews; turn-based harvest is outside Week 7.
+Screenshots: Temp/ColonizationWeek7Profession.png and Temp/ColonizationWeek7TownYield.png

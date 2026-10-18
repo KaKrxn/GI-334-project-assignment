@@ -1,0 +1,3 @@
+Week 5 passed with 62 Native towns.
+The old Week 6 runner queued StartExtended on EditorApplication.delayCall and remained in stable Edit Mode while its upstream suites waited.
+The Week 9 integration updates this harness to a persistent Editor-update start request; production code is unchanged by this correction.

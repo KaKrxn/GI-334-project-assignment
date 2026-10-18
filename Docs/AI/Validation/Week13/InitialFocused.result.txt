@@ -1,0 +1,6 @@
+FAILED
+Phase 26, operation 7
+System.InvalidOperationException: UI click raycast missed YesButton; hit=none
+  at ColonizationWeek13SmokeTest.Click (UnityEngine.GameObject target) [0x00076] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek13SmokeTest.cs:288 
+  at ColonizationWeek13SmokeTest.Step () [0x0124b] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek13SmokeTest.cs:220 
+  at ColonizationWeek13SmokeTest+<RuntimeLoop>d__21.MoveNext () [0x00080] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek13SmokeTest.cs:101 

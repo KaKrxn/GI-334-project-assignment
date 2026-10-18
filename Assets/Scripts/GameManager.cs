@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GameManager : MonoBehaviour
+public partial class GameManager : MonoBehaviour
 {
     [SerializeField]
     private Grid grid;
@@ -81,6 +81,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Town curTown;
     public Town CurTown { get { return curTown; } set { curTown = value; } }
     public bool TownPanelOpen { get { return UIManager.instance != null && UIManager.instance.IsTownPanelOpen; } }
+    public bool MapInputBlocked { get { return CombatInProgress || TownPanelOpen || (UIManager.instance != null && UIManager.instance.InEurope) || (DialogManager.instance != null && DialogManager.instance.IsOpen); } }
+    [SerializeField] private int year = 1600;
+    public int Year { get { return year; } }
 
     void Awake()
     {
@@ -123,17 +126,21 @@ public class GameManager : MonoBehaviour
         GenerateAllEuropeanExplorerUnits();
         GenerateAllNativeTowns();
         GenerateAllNativeUnits();
+        if (EuropeManager.instance != null) EuropeManager.instance.Initialize();
+        ShowFirstKingDialogText();
     }
 
     void Update()
     {
-        if (TownPanelOpen) return;
+        if (CombatInProgress || (DialogManager.instance != null && DialogManager.instance.IsOpen)) return;
+        if (Keyboard.current != null && playerTurn && Keyboard.current.eKey.wasPressedThisFrame) { EuropePanel(); return; }
+        if (Keyboard.current != null && playerTurn && Keyboard.current.backspaceKey.wasPressedThisFrame)
+        { Endturn(); return; }
+        if (MapInputBlocked) return;
         if (Keyboard.current != null && Keyboard.current.iKey.wasPressedThisFrame)
             ToggleHexText();
         if (Keyboard.current != null && playerTurn && Keyboard.current.tabKey.wasPressedThisFrame)
             SelectNextPlayerUnit();
-        if (Keyboard.current != null && playerTurn && Keyboard.current.backspaceKey.wasPressedThisFrame)
-            Endturn();
     }
 
     private void ToggleHexText()
@@ -186,11 +193,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SelectPlayerFaction() { playerFaction = factions[0]; }
+    public void SelectPlayerFaction()
+    {
+        int selected = Settings.playerNationId;
+        if (selected < 0 || selected >= Settings.EuropeanNationCount) selected = 0;
+        Settings.playerNationId = selected;
+        playerFaction = factions[selected];
+    }
 
     private void GenerateEuropeanShip(Faction fact)
     {
-        Hex hex = allHexes[WIDTH - 1, Random.Range(0, HEIGHT)];
+        GenerateEuropeanShip(fact, Random.Range(0, HEIGHT));
+    }
+    private void GenerateEuropeanShip(Faction fact, int y)
+    {
+        Hex hex = allHexes[WIDTH - 1, y];
         GameObject obj = Instantiate(navalUnitPrefab, hex.Pos, Quaternion.identity, fact.UnitParent);
         NavalUnit ship = obj.GetComponent<NavalUnit>();
         ship.UnitInit(this, fact, navalUnitData[0]);
@@ -203,11 +220,15 @@ public class GameManager : MonoBehaviour
             CameraController.instance.MoveCamera(ship.transform.position);
             ship.Visible = true;
         }
+        else ship.SetUnitDestination(FindNearestLandHexToLand(y));
     }
 
     private void GenerateAllEuropeanShips()
     {
-        for (int i = 0; i < 5; i++) GenerateEuropeanShip(factions[i]);
+        int interval = HEIGHT / 5, row = HEIGHT;
+        List<int> spots = new List<int>();
+        for (int i = 0; i < 5; i++) { row -= Random.Range(5, interval); spots.Add(row); }
+        for (int i = 0; i < 5; i++) { int index = Random.Range(0, spots.Count); GenerateEuropeanShip(factions[i], spots[index]); spots.RemoveAt(index); }
     }
 
     private void GeneratePassengerUnit(Faction fact, Hex hex, int unitId, bool show, NavalUnit ship)
@@ -243,7 +264,7 @@ public class GameManager : MonoBehaviour
 
     public void SelectPlayerUnit(Unit unit)
     {
-        if (!playerTurn || TownPanelOpen || unit == null || unit.Faction != playerFaction ||
+        if (!playerTurn || MapInputBlocked || unit == null || unit.CurHex == null || unit.Faction != playerFaction ||
             unit.UnitStatus == UnitStatus.WorkInField || unit.UnitStatus == UnitStatus.WorkInTown) return;
         if (curUnit != null)
         {
@@ -254,12 +275,22 @@ public class GameManager : MonoBehaviour
         unit.gameObject.SetActive(true);
         unit.SetUnitToFrontLayerOrder();
         curUnit = unit;
+        HideOtherLandUnits(unit);
+        CameraController.instance.MoveCamera(unit.CurPos);
         FocusPlayerUnit(unit);
+    }
+
+    public void HideOtherLandUnits(Unit selected)
+    {
+        if (selected == null || selected.Faction != playerFaction || selected.CurHex == null) return;
+        foreach (Unit other in selected.CurHex.UnitsInHex)
+            if (other != selected && other.UnitType == UnitType.Land && other.Faction == playerFaction && !other.IsMoving)
+                other.gameObject.SetActive(false);
     }
 
     public bool CheckIfHexIsAdjacent(Hex center, Hex target)
     {
-        return target != null && HexCalculator.GetHexAround(allHexes, center).Contains(target);
+        return center != null && target != null && HexCalculator.GetHexAround(allHexes, center).Contains(target);
     }
 
     public void ClearDarkFogAroundUnit(Unit unit)
@@ -271,6 +302,7 @@ public class GameManager : MonoBehaviour
 
     public void LeaveSeenFogAroundUnit(Unit unit)
     {
+        if (unit.CurHex == null) return;
         unit.CurHex.SeenHex();
         foreach (Hex hex in HexCalculator.GetHexAround(allHexes, unit.CurHex)) hex.SeenHex();
     }
@@ -289,7 +321,7 @@ public class GameManager : MonoBehaviour
         for (int step = 1; step <= playerFaction.Units.Count; step++)
         {
             Unit next = playerFaction.Units[(current + step) % playerFaction.Units.Count];
-            if (next.UnitStatus == UnitStatus.WorkInField || next.UnitStatus == UnitStatus.WorkInTown) continue;
+            if (next.CurHex == null || next.UnitStatus == UnitStatus.WorkInField || next.UnitStatus == UnitStatus.WorkInTown) continue;
             SelectPlayerUnit(next);
             CameraController.instance.MoveCamera(next.transform.position);
             break;
@@ -394,7 +426,7 @@ public class GameManager : MonoBehaviour
         if (playerFaction.Units.Count == 0) return;
         foreach (Unit first in playerFaction.Units)
         {
-            if (first.UnitStatus == UnitStatus.WorkInField || first.UnitStatus == UnitStatus.WorkInTown) continue;
+            if (first.CurHex == null || first.UnitStatus == UnitStatus.WorkInField || first.UnitStatus == UnitStatus.WorkInTown) continue;
             SelectPlayerUnit(first);
             CameraController.instance.MoveCamera(first.CurPos);
             break;
@@ -403,12 +435,28 @@ public class GameManager : MonoBehaviour
 
     public void Endturn()
     {
-        if (!playerTurn || TownPanelOpen || AIManager.instance == null) return;
+        if (!playerTurn || CombatInProgress || AIManager.instance == null || (DialogManager.instance != null && DialogManager.instance.IsOpen)) return;
         foreach (Faction fact in factions)
             foreach (Unit unit in fact.Units) if (unit.IsMoving) return;
+        if (UIManager.instance != null) UIManager.instance.CheckActiveUIPanel();
         if (curUnit != null) ClearToggleBorder(curUnit);
+        if (EuropeManager.instance != null) EuropeManager.instance.UpdateShipInTransitTurn();
         playerTurn = false;
         AIManager.instance.StartAITurn();
+    }
+
+    public void AccumulateStockAllTowns()
+    {
+        foreach (Faction fact in factions)
+            foreach (Town town in fact.Towns) town.AccumulateToWarehouse();
+    }
+
+    public void StartNewTurn()
+    {
+        if (playerTurn || (AIManager.instance != null && AIManager.instance.IsRunning)) return;
+        AccumulateStockAllTowns();
+        playerTurn = true;
+        SelectPlayerFirstUnit();
     }
 
     public NavalUnit CheckIfHexHasOurShipToBoard(Hex hex)
@@ -422,11 +470,27 @@ public class GameManager : MonoBehaviour
 
     public void SetupCurrentTown(Town town)
     {
-        if (!playerTurn || TownPanelOpen || town == null || town.Faction != playerFaction || UIManager.instance == null) return;
+        if (!playerTurn || MapInputBlocked || town == null || town.Faction != playerFaction || UIManager.instance == null) return;
         foreach (Unit unit in playerFaction.Units) if (unit.IsMoving) return;
         curTown = town;
         UIManager.instance.SetupCurrentTown(town.CurHex, HexCalculator.GetHexAroundToArray(allHexes, town.CurHex));
         UIManager.instance.ToggleTownPanel(true);
+    }
+
+    public void EuropePanel() { if (UIManager.instance != null) UIManager.instance.CheckEuropePanel(); }
+    public void CheckShipToEurope()
+    {
+        if (EuropeManager.instance == null) return;
+        foreach (Unit unit in playerFaction.Units) if (unit is NavalUnit ship && ship.CurHex != null && ship.CurHex.X == WIDTH - 1) EuropeManager.instance.QuestionGoToEurope(ship);
+    }
+    public void CheckToGenerateShipFromEurope(NavalUnit ship)
+    {
+        if (ship == null || ship.Faction != playerFaction) return;
+        // Returning ships keep their identity, cargo and original passenger objects.
+        Hex hex = allHexes[WIDTH - 2, Random.Range(0, HEIGHT)];
+        ship.SetupPosition(hex); ship.UnitStatus = UnitStatus.None; ship.MovePoint = ship.MovePointMax; ship.Visible = true; ship.ShowHideSprite(true);
+        foreach (LandUnit passenger in ship.Passengers) { passenger.SetupPosition(hex); passenger.gameObject.SetActive(false); }
+        ship.gameObject.SetActive(true); ClearDarkFogAroundUnit(ship); SelectPlayerUnit(ship);
     }
 
 }

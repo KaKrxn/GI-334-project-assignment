@@ -10,4 +10,5 @@ public class FactionData : ScriptableObject
     public Sprite shieldIcon;
     public Sprite unitIcon;
     public Sprite townIcon;
+    public Sprite leaderSprite;
 }

@@ -1,0 +1,20 @@
+PASSED
+10/17/2026 10:38:04 PM
+Ocean: source bottom=33, lower corner=290, width=906; PPU400, padded 1152x1664
+Grassland: source bottom=100, lower corner=352, width=895; PPU400, padded 1152x1664
+ConiferForest: source bottom=109, lower corner=365, width=887; PPU400, padded 1152x1664
+Prairie: source bottom=106, lower corner=350, width=856; PPU400, padded 1152x1664
+BroadleafForest: source bottom=78, lower corner=354, width=960; PPU400, padded 1152x1664
+Savanna: source bottom=156, lower corner=408, width=885; PPU400, padded 1152x1664
+SavannaWoodland: source bottom=104, lower corner=370, width=934; PPU400, padded 1152x1664
+Plain: source bottom=81, lower corner=336, width=896; PPU400, padded 1152x1664
+MixedForest: source bottom=127, lower corner=402, width=919; PPU400, padded 1152x1664
+Tundra: source bottom=156, lower corner=411, width=907; PPU400, padded 1152x1664
+BorealForest: source bottom=60, lower corner=336, width=932; PPU400, padded 1152x1664
+Desert: source bottom=146, lower corner=391, width=870; PPU400, padded 1152x1664
+ScrubForest: source bottom=92, lower corner=359, width=946; PPU400, padded 1152x1664
+Swamp: source bottom=91, lower corner=363, width=939; PPU400, padded 1152x1664
+TropicalRainforest: source bottom=77, lower corner=362, width=959; PPU400, padded 1152x1664
+Arctic: source bottom=358, lower corner=561, width=658; PPU400, padded 1152x1664
+Hills: source bottom=51, lower corner=321, width=891; PPU400, padded 1152x1664
+Mountains: source bottom=85, lower corner=360, width=909; PPU400, padded 1152x1664

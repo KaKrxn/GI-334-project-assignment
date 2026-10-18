@@ -1,0 +1,2 @@
+PASSED
+Week 13 native Map01 purchase/train/order panels, ten specialist buttons, five ship buttons/prices, UnitDrag status icon and LandUnit status renderer/sprites saved through Unity APIs. SelectNation now has three sequential intro panels and BlackPanel. Existing scenes, GUIDs and project assets retained; no external packages/art. Recruit remains outside the manual's implemented scope.

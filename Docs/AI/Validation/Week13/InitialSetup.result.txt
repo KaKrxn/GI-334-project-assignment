@@ -1,0 +1,10 @@
+FAILED
+UnityEngine.MissingComponentException: There is no 'SpriteRenderer' attached to the "StatusSprite" game object, but a script is trying to access it.
+You probably need to add a SpriteRenderer to the game object "StatusSprite". Or your script needs to check if the component is attached before using it.
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000b4] in <5ecefda573de420b8643923ab4ab8ab5>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <5ecefda573de420b8643923ab4ab8ab5>:0 
+  at UnityEngine.Renderer.SetMaterial (UnityEngine.Material m) [0x00006] in <5ecefda573de420b8643923ab4ab8ab5>:0 
+  at UnityEngine.Renderer.set_sharedMaterial (UnityEngine.Material value) [0x00000] in <5ecefda573de420b8643923ab4ab8ab5>:0 
+  at ColonizationWeek13Setup.UpgradePrefabs (GameManager game) [0x000ac] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek13Setup.cs:114 
+  at ColonizationWeek13Setup.Apply () [0x00101] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek13Setup.cs:37 
+  at ColonizationWeek13Setup.Tick () [0x00038] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek13Setup.cs:23 

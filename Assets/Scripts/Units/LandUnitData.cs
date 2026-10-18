@@ -12,4 +12,5 @@ public class LandUnitData : ScriptableObject
     public bool armed;
     public bool hasMusket;
     public bool hasHorse;
+    public int price;
 }

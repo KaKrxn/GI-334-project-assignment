@@ -1,0 +1,5 @@
+PASSED
+2026-10-14 15:04:07 Asia/Bangkok: native setup rerun reused the existing scene objects, NationCard prefab and derived sprites.
+All eight derived Sprite .meta hashes/GUIDs were identical before and after setup.
+The following five-nation flow loaded the saved scenes and verified exactly five nation cards with correct bindings.
+Map01 scene and source Art Deco texture importers are unchanged in Git.

@@ -1,0 +1,3 @@
+FAILED
+Phase 1: System.InvalidOperationException: Automatic center Food failed.
+  at ColonizationWeek7SmokeTest.RuntimeStep () [0x002f6] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek7SmokeTest.cs:127 

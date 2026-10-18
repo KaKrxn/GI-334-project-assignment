@@ -1,0 +1,153 @@
+{
+  "mode": "Built-in image_gen; one call per asset",
+  "references": [
+    "Assets/Textures/UserArtwork/Land/01_Free_Colonist.png",
+    "Docs/AI/Validation/Week6/ColonizationWeek6TownPanel.png"
+  ],
+  "files": [
+    {
+      "name": "Corn",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: two ripe golden maize cobs with green husks. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-d5f4d40e-428a-4dc8-bf83-5072f25b35cf.png"
+    },
+    {
+      "name": "Sugar",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: a tied bundle of cut green sugarcane stalks and a small mound of raw sugar. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-1d27c50f-47e5-4ac4-874d-8a2404e36485.png"
+    },
+    {
+      "name": "Tobacco",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: three cured brown tobacco leaves tied in a small bundle. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-2d94f4ce-ce4f-4558-bb80-5db8bc4ea00b.png"
+    },
+    {
+      "name": "Cotton",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: three white fluffy cotton bolls on short brown stems. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-7a64cac2-5578-4174-b556-dbcbdc29afc0.png"
+    },
+    {
+      "name": "Furs",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: a neatly folded bundle of brown animal pelts. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-a09442a7-9562-468a-a96b-c526e084ce6a.png"
+    },
+    {
+      "name": "Lumber",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: a neatly stacked bundle of sawn wooden boards. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-225d0606-76fb-423e-8fbd-713993ed22b3.png"
+    },
+    {
+      "name": "IronOres",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: three rough dark iron ore rocks with metallic gray veins. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-98d03bdc-99f2-4723-8f5b-95b19463a955.png"
+    },
+    {
+      "name": "Silver",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: two small silver ingots with one silver ore rock. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-896eddec-a734-42ca-bc20-f0fd7f4e4c72.png"
+    },
+    {
+      "name": "Horses",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: one complete chestnut horse standing in side three-quarter view, all legs visible. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-a4e79985-e19f-4e72-b87c-36d034ce4966.png"
+    },
+    {
+      "name": "Rum",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: one corked dark green glass rum bottle with a plain unlettered paper label and a tiny wooden cup. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-ed528062-ef31-4dfb-9be9-eff16c3f1ff5.png"
+    },
+    {
+      "name": "Cigars",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: three rolled brown cigars tied with a plain red ribbon. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-df964f24-4c90-40dd-8464-7945c5e56ab4.png"
+    },
+    {
+      "name": "Clothes",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: a folded cream linen shirt and folded muted blue cloth. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-1797ca21-bfac-40d0-8c15-2683b8b61fe5.png"
+    },
+    {
+      "name": "Coats",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: one folded brown wool coat with a fur collar. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-769f31e0-b88d-4750-accf-cb4bcd2dcc9e.png"
+    },
+    {
+      "name": "TradeGoods",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: a small tied wooden trade crate with folded cloth, beads and a ceramic jug. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-2cc6a75b-606d-47ab-9ade-e81fed1e8be1.png"
+    },
+    {
+      "name": "Tools",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: a crossed iron hammer and wood-handled axe, simple readable shapes. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-817f9c13-e91f-4081-a5bf-050af683c641.png"
+    },
+    {
+      "name": "Musket",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: one complete 17th-century flintlock musket diagonally composed, walnut stock and long iron barrel, no modern parts. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-f4faf3a5-4661-4372-9cd6-d55ce1fdfb46.png"
+    },
+    {
+      "name": "Fish",
+      "group": "Products",
+      "prompt": "Create exactly ONE inventory resource icon for a colonial strategy game. Input image is STYLE REFERENCE ONLY from this project's character artwork. Match its crisp ink-like contours, restrained warm earthy palette, hand-painted flat color shading, three-quarter perspective, readable silhouettes and upper-left lighting. Subject: one whole silver-blue fish with intact tail and fins. Square 1024x1024 canvas, entire object centered inside an 80px transparent safety margin on EVERY side, no clipping. Transparent RGBA outside object. No tile, pedestal, halo, text, labels, frame, circle, UI, watermark or external cast shadow. Interior fully opaque. Icon must be readable at 64px. One coherent icon, not multiple variants.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-d0c5d233-e972-4453-93e1-1814a5ddbdcc.png"
+    },
+    {
+      "name": "England",
+      "group": "Leaders",
+      "prompt": "Generate exactly ONE full-body colonial strategy-game leader portrait. Input is project's STYLE reference only: match its crisp dark contours, warm hand-painted flat-shaded colors and character proportions. SUBJECT: a fictional English expedition captain, burgundy doublet, cream ruff collar, brown boots, dark brimmed hat, short beard, holding a rolled nautical chart. This is an original fictional representative, not a named historical portrait. Standing relaxed dignified three-quarter pose facing slightly left; anatomically coherent hands. Complete hat, boots and held objects inside 10% clear margins on ALL sides. Portrait 1024x1536 canvas, actual transparent RGBA background. No flag, shield, pedestal, scenery, text, labels, watermark, outer shadow, glow or clipping. More distinguished than an ordinary worker, same visual world.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-9e3c42c7-7efd-4102-af30-df74a1c3ab9f.png"
+    },
+    {
+      "name": "France",
+      "group": "Leaders",
+      "prompt": "Generate exactly ONE full-body colonial strategy-game leader portrait. Input is project's STYLE reference only: match its crisp dark contours, warm hand-painted flat-shaded colors and character proportions. SUBJECT: a fictional French expedition commander, deep blue doublet with modest gold trim, cream collar, brown boots, dark feathered hat, trimmed beard, holding a compass. This is an original fictional representative, not a named historical portrait. Standing relaxed dignified three-quarter pose facing slightly left; anatomically coherent hands. Complete hat, boots and held objects inside 10% clear margins on ALL sides. Portrait 1024x1536 canvas, actual transparent RGBA background. No flag, shield, pedestal, scenery, text, labels, watermark, outer shadow, glow or clipping. More distinguished than an ordinary worker, same visual world.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-0c461221-3d4b-44a0-aea9-c1b4ece58cac.png"
+    },
+    {
+      "name": "Spain",
+      "group": "Leaders",
+      "prompt": "Generate exactly ONE full-body colonial strategy-game leader portrait. Input is project's STYLE reference only: match its crisp dark contours, warm hand-painted flat-shaded colors and character proportions. SUBJECT: a fictional Spanish expedition commander, dark steel breastplate over ochre doublet, simple morion helmet, brown boots, dark beard, holding a rolled map. This is an original fictional representative, not a named historical portrait. Standing relaxed dignified three-quarter pose facing slightly left; anatomically coherent hands. Complete hat, boots and held objects inside 10% clear margins on ALL sides. Portrait 1024x1536 canvas, actual transparent RGBA background. No flag, shield, pedestal, scenery, text, labels, watermark, outer shadow, glow or clipping. More distinguished than an ordinary worker, same visual world.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-f5616c80-cdc2-4568-8a94-bdd11cf9c939.png"
+    },
+    {
+      "name": "Netherland",
+      "group": "Leaders",
+      "prompt": "Generate exactly ONE full-body colonial strategy-game leader portrait. Input is project's STYLE reference only: match its crisp dark contours, warm hand-painted flat-shaded colors and character proportions. SUBJECT: a fictional Dutch merchant expedition captain, black broad-brimmed hat, orange-brown sash over dark navy coat, plain white collar, brown boots, holding a navigation ledger. Original fictional representative, not a named historical portrait. Standing dignified three-quarter pose. Complete hat, boots, held objects inside generous 100-pixel transparent margins on ALL sides; character must be smaller than canvas. Portrait 1024x1536 canvas, actual transparent RGBA background. No flag, shield, pedestal, scenery, text, labels, watermark, external shadow, glow or clipping.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-2c68c718-ebaa-411c-a917-043aea370d72.png"
+    },
+    {
+      "name": "Portugal",
+      "group": "Leaders",
+      "prompt": "Generate exactly ONE full-body colonial strategy-game leader portrait. Input is project's STYLE reference only: match its crisp dark contours, warm hand-painted flat-shaded colors and character proportions. SUBJECT: a fictional Portuguese expedition captain, dark green doublet, crimson sash, cream shirt, dark brimmed hat, brown boots, black beard, holding an astrolabe. Original fictional representative, not a named historical portrait. Standing dignified three-quarter pose. Complete hat, boots, held objects inside generous 100-pixel transparent margins on ALL sides; character must be smaller than canvas. Portrait 1024x1536 canvas, actual transparent RGBA background. No flag, shield, pedestal, scenery, text, labels, watermark, external shadow, glow or clipping.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-2bd20714-c969-48b9-b7ca-6cdaec380583.png"
+    },
+    {
+      "name": "TownPanel",
+      "group": "UI",
+      "prompt": "Create ONE 1920x1080 landscape background texture for a colonial strategy game's Town Panel. Image1 is the current functional UI LAYOUT reference; image2 is the game's illustrated art STYLE reference. Produce only a restrained hand-painted parchment-and-dark-walnut interface backdrop: warm ivory parchment fields, worn brown leather outer trim, fine muted brass rules, subtle paper fibers and shallow inset shading. Preserve the general quiet zoned layout of image1: thin header band at top 0..50, large upper main content band to y700 with left ~59% lighter parchment and right ~41% dark forest-green parchment, middle bottom band y700..965 divided into muted green left38%, desaturated blue port middle27%, dark brown right35%, bottom warehouse band965..1080 dark walnut. Decorative frame only; NO TEXT, NO LABELS, NO BUILDINGS, NO ICONS, NO CHARACTERS, NO BUTTONS, NO HEXES, NO SLOT BOXES. Leave interiors spacious and low contrast so actual Unity controls and slots render on top. Flat 2D artwork, no photographic mockup, no perspective. Opaque background, fills full canvas.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-f996edcb-22df-41d4-9c65-a7db62652fb5.png"
+    },
+    {
+      "name": "ProductionChains",
+      "group": "UI",
+      "prompt": "Create ONE illustrated reference poster for a colonial strategy game, 2560x1600 landscape. Use attached resource icons as STYLE references: crisp dark outlines, warm earthy hand-painted color blocks. Ivory parchment background, thin walnut/brass border, restrained ornamentation, very clear readable typography. Title EXACTLY: 'PRODUCTION CHAINS'. Subtitle EXACTLY: 'Design reference'. Eight equally spaced horizontal rows, each has small illustrated icons with matching short English labels connected by simple right arrows. EXACTLY these 8 rows, no additions or omissions: 1 'Farmer' -> 'Plain' -> 'Corn'; 2 'Fisherman' -> 'Ocean' -> 'Fish'; 3 'Sugar Planter' -> 'Sugar' -> 'Distiller' -> 'Rum'; 4 'Tobacco Planter' -> 'Tobacco' -> 'Tobacconist' -> 'Cigars'; 5 'Cotton Planter' -> 'Cotton' -> 'Weaver' -> 'Clothes'; 6 'Fur Trapper' -> 'Furs' -> 'Fur Trader' -> 'Coats'; 7 'Ore Miner' -> 'Iron Ore' -> 'Blacksmith' -> 'Tools' -> 'Gunsmith' -> 'Musket'; 8 'Lumberjack' -> 'Lumber' -> 'Carpenter' -> 'Hammer'. Each row reads left-to-right, ample breathing room, illustrated profession figures and goods icons. Do not show production rates, numbers, multiplier bonuses or claim the recipes are implemented. Footer EXACTLY: 'Concept guide'. All text and art inside generous safe margins. Opaque PNG.",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-cd9a6745-39ee-4b4e-be41-a0def4983497.png"
+    }
+  ]
+}

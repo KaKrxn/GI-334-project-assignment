@@ -1,0 +1,5 @@
+FAILED
+Phase 29, operation 12
+System.NullReferenceException: Object reference not set to an instance of an object
+  at ColonizationWeek11SmokeTest.Step () [0x01426] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek11SmokeTest.cs:236 
+  at ColonizationWeek11SmokeTest+<RuntimeLoop>d__23.MoveNext () [0x00080] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek11SmokeTest.cs:101 

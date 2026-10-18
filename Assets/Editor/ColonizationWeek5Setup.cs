@@ -13,7 +13,7 @@ public static class ColonizationWeek5Setup
     public const string ResultPath = "Temp/ColonizationWeek5Setup.result.txt";
     private const string MapPath = "Assets/Scenes/Map01.unity";
     private const string TownPath = "Assets/Prefabs/Towns/Town.prefab";
-    private static readonly string[] NativeNames = { "Sioux", "Tupi", "Iroquois", "Apache", "Aztec", "Huron", "Maya", "Inca" };
+    private static readonly string[] NativeNames = { "Powhatan", "Taino", "Onondaga", "Mapuche", "Mexica", "Wendat", "Wampanoag", "Inca" };
     private static readonly string[] TownIcons = { "villageWood00 1", "villageWood01 1", "villageWood02 1", "villageWood03 1", "SteppedPyramid00", "villageWood00 1", "SteppedPyramid00", "SteppedPyramid00" };
 
     [InitializeOnLoadMethod]

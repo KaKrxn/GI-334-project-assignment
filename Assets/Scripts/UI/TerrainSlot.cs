@@ -32,10 +32,20 @@ public class TerrainSlot : MonoBehaviour, IDropHandler
         gameObject.SetActive(data != null);
         terrainImage.sprite = data != null ? data.TerrainSprite.sprite : null;
         forestImage.sprite = data != null && data.HasForest ? data.ForestSprite.sprite : null;
+        // Keep padded sprites at the same world-to-UI scale as the original
+        // 100 PPU tiles; stretching to 256x384 would shrink their ground.
+        SizeTerrainImage(terrainImage);
+        SizeTerrainImage(forestImage);
         forestImage.gameObject.SetActive(data != null && data.HasForest);
         townImage.sprite = data != null && data.Town != null ? data.Town.TownSprite.sprite : null;
         townImage.gameObject.SetActive(data != null && data.Town != null);
         yieldText.gameObject.SetActive(false);
+    }
+
+    private static void SizeTerrainImage(UnityEngine.UI.Image image)
+    {
+        if (image.sprite == null) return;
+        image.rectTransform.sizeDelta = image.sprite.rect.size * (100f / image.sprite.pixelsPerUnit);
     }
 
     public void OnDrop(PointerEventData eventData)

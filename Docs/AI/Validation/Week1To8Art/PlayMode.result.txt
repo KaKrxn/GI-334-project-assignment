@@ -1,0 +1,3 @@
+PASSED
+10/18/2026 3:44:53 AM
+All 5 selection portraits switch correctly; 5 runtime European leaders, 17 product icons and all 16 warehouse icons reference generated art; TownPanel background and production-guide open/close work.

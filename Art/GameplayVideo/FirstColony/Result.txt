@@ -1,0 +1,2 @@
+PASSED
+Frames=523; FPS=4; real movement, turn, landfall, clearing, town construction and food harvest demonstrated.

@@ -101,6 +101,7 @@ public static class ColonizationWeek5SmokeTest
             if (EditorApplication.timeSinceStartup - started > 180) throw new TimeoutException("Week 5 smoke test timed out at phase " + phase);
             if (lastFrame == Time.frameCount) return;
             lastFrame = Time.frameCount;
+            if (ColonizationLegacyDialogFixture.AcknowledgeNotice()) return;
             frame++;
             phaseFrame++;
             GameManager manager = GameManager.instance;
@@ -171,8 +172,10 @@ public static class ColonizationWeek5SmokeTest
                     Require(pioneer.CurHex == forest && pioneer.CurPos == forest.Pos && pioneer.MovePoint == pioneer.MovePointMax - forestCost, "Landfall position/cost failed.");
                     pioneer.BuildSettlement();
                     Require(pioneer.UnitStatus == UnitStatus.None && pioneer.ToolsNum == 100, "Building on forest consumed tools.");
+                    ColonizationLegacyDialogFixture.AcknowledgeNotice();
                     pioneer.ToolsNum = 19; pioneer.ClearingLand();
                     Require(pioneer.UnitStatus == UnitStatus.None && pioneer.ToolsNum == 19, "Insufficient tools accepted.");
+                    ColonizationLegacyDialogFixture.AcknowledgeNotice();
                     pioneer.ToolsNum = 100;
                     KeyDown(Key.P); Next(); break;
                 case 9:
@@ -341,7 +344,7 @@ public static class ColonizationWeek5SmokeTest
 
     private static void SetupCoastFixture(GameManager manager)
     {
-        forest = manager.AllHexes.Cast<Hex>().First(h => h.HasForest && !h.HasTown && h.HexType != HexType.Hills && h.HexType != HexType.Mountains && HexCalculator.GetHexAround(manager.AllHexes, h).Any(n => n.HexType == HexType.Ocean && HexCalculator.GetHexAround(manager.AllHexes, n).Any(sea => sea.HexType == HexType.Ocean)));
+        forest = manager.AllHexes.Cast<Hex>().First(h => h.HasForest && !h.HasTown && !HexCalculator.CheckIfHexAroundHasTown(manager.AllHexes,h) && h.HexType != HexType.Hills && h.HexType != HexType.Mountains && HexCalculator.GetHexAround(manager.AllHexes, h).Any(n => n.HexType == HexType.Ocean && HexCalculator.GetHexAround(manager.AllHexes, n).Any(sea => sea.HexType == HexType.Ocean)));
         coastSea = HexCalculator.GetHexAround(manager.AllHexes, forest).First(h => h.HexType == HexType.Ocean && HexCalculator.GetHexAround(manager.AllHexes, h).Any(sea => sea.HexType == HexType.Ocean));
         PositionShipFixture(coastSea);
         forestCost = forest.MoveCost;
@@ -385,8 +388,17 @@ public static class ColonizationWeek5SmokeTest
             Unit unit = pair.Key;
             if (unit.UnitStatus == UnitStatus.OnBoard) continue;
             bool moved = unit.CurHex != pair.Value;
-            Require(!moved || manager.CheckIfHexIsAdjacent(pair.Value, unit.CurHex), "AI moved more than one Hex.");
-            Require(unit.MovePoint == unit.MovePointMax - (moved ? unit.CurHex.MoveCost : 0), "AI points did not reset/deduct correctly.");
+            if (unit.DestinationHex != null)
+            {
+                int dq=(unit.CurHex.X-(unit.CurHex.Y-(unit.CurHex.Y&1))/2)-(pair.Value.X-(pair.Value.Y-(pair.Value.Y&1))/2), dr=unit.CurHex.Y-pair.Value.Y;
+                int distance=Mathf.Max(Mathf.Abs(dq),Mathf.Abs(dr),Mathf.Abs(dq+dr));
+                Require(unit.MovePoint>=0 && unit.MovePoint<=unit.MovePointMax && distance<=unit.MovePointMax-unit.MovePoint, "Destination AI exceeded its movement budget.");
+            }
+            else
+            {
+                Require(!moved || manager.CheckIfHexIsAdjacent(pair.Value, unit.CurHex), "Random AI moved more than one Hex.");
+                Require(unit.MovePoint == unit.MovePointMax - (moved ? unit.CurHex.MoveCost : 0), "Random AI points did not reset/deduct correctly.");
+            }
             if (moved && !unit.Faction.IsEuropean) movedNatives++;
             if (unit is NavalUnit vessel) CheckPassengerPositions(vessel);
         }

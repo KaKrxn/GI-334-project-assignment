@@ -1,0 +1,8 @@
+PASSED
+2026-10-14: final Week 8 runtime and Editor source compile against actual Unity assembly references.
+Assembly-CSharp exit 0
+Assembly-CSharp-Editor exit 0
+Native Unity Editor imported the final source without compiler errors.
+Expected runtime CS0649 warnings concern private serialized fields populated by Unity.
+Native Play Mode scenario: ColonizationWeek8SmokeTest.result.txt
+No standalone player build was produced.

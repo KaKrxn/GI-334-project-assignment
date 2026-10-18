@@ -59,7 +59,7 @@ public static class ColonizationWeek6Setup
                 FactionData data = manager.FactionData[i];
                 // The manual exposes this as configurable faction data. These
                 // are the initial regional artwork choices, not extra unit types.
-                data.isTropicalNatives = data.nation == Nation.Tupi || data.nation == Nation.Aztec || data.nation == Nation.Maya || data.nation == Nation.Inca;
+                data.isTropicalNatives = data.nation == Nation.Taino || data.nation == Nation.Mexica || data.nation == Nation.Inca;
                 EditorUtility.SetDirty(data);
                 manager.Factions[i].FactionInit(data);
                 PrefabUtility.RecordPrefabInstancePropertyModifications(manager.Factions[i]);
@@ -237,7 +237,7 @@ public static class ColonizationWeek6Setup
         for(int i=0;i<6;i++) if(((RectTransform)ui.AreaSlots[i].transform).anchoredPosition!=SlotPositions[i]) throw new InvalidOperationException("Hex slot order/position incorrect.");
         foreach(FactionData data in manager.FactionData)
         {
-            bool tropical=data.nation==Nation.Tupi || data.nation==Nation.Aztec || data.nation==Nation.Maya || data.nation==Nation.Inca;
+            bool tropical=data.nation==Nation.Taino || data.nation==Nation.Mexica || data.nation==Nation.Inca;
             if(data.isTropicalNatives!=tropical) throw new InvalidOperationException("Native variant not configured.");
         }
         foreach(string path in new[]{SlotPath,DragPath}) if(AssetDatabase.LoadAssetAtPath<GameObject>(path)==null) throw new InvalidOperationException("Missing UI prefab: "+path);

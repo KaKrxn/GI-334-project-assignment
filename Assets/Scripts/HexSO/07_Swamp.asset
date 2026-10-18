@@ -15,14 +15,8 @@ MonoBehaviour:
   hexName: Swamp
   type: 7
   terrainSprites:
-  - {fileID: 21300000, guid: 1daea85418ac6424aa4690b0b2120af4, type: 3}
-  - {fileID: 21300000, guid: 0711dacd601c9d54aa9bb076223388b8, type: 3}
-  - {fileID: 21300000, guid: 8f4f7c0cc5d11264db3e881ee9ec55bb, type: 3}
-  - {fileID: 21300000, guid: 2409c420c60032245835d01dcfd1d837, type: 3}
+  - {fileID: 21300000, guid: f7679a333edcaec4c9030669c4ce220d, type: 3}
   forestSprites:
-  - {fileID: 21300000, guid: 2e1c9fb7ff0891645bc0a5b7ea9efdc6, type: 3}
-  - {fileID: 21300000, guid: 6753a040066c6f74092185e53c71da42, type: 3}
-  - {fileID: 21300000, guid: cab25e357eef3d449a02e4fe98b3022d, type: 3}
-  - {fileID: 21300000, guid: e17b8a148a198744b9dbff3e8e0472a5, type: 3}
+  - {fileID: 21300000, guid: d9218b5f26cfd2c43ad3bbc8e09e1c5d, type: 3}
   resourceYield: 0200000005000000000000000000000004000000040000000200000000000000
   moveCost: 2

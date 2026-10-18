@@ -1,0 +1,5 @@
+FAILED
+Phase 5, operation 0
+System.InvalidOperationException: Adjacent-town construction warning failed.
+  at ColonizationWeek12SmokeTest.Step () [0x01247] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek12SmokeTest.cs:219 
+  at ColonizationWeek12SmokeTest+<RuntimeLoop>d__23.MoveNext () [0x00080] in Z:\.Project Unity\GI-334-project-assignment\Assets\Editor\ColonizationWeek12SmokeTest.cs:102 

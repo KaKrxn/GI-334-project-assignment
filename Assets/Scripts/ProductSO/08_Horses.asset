@@ -15,4 +15,6 @@ MonoBehaviour:
   id: 8
   productName: Horses
   icons:
-  - {fileID: 21300000, guid: 0b04759efe2614d40a8fd78cacd8748c, type: 3}
+  - {fileID: 21300000, guid: 26d1c759d3faed44b82233afa9450064, type: 3}
+  startBid: 5
+  startAsk: 6

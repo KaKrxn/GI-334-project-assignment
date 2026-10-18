@@ -1,0 +1,132 @@
+{
+  "method": "Built-in image_gen edit, one call per asset",
+  "prompt": "Edit target image: repair the cropped Hex silhouette. Preserve this Ocean tile's artwork, biome, colors, flat vector style and viewpoint. Reframe the entire sprite smaller within the SAME portrait 1024x1536 transparent canvas so it has at least 64 pixels fully transparent clearance on left, right and bottom. Reconstruct any missing lower corners and bottom tip as a complete clean six-sided POINT-UP hexagon with vertical left/right sides. Target ground vertices (512,544),(944,760),(944,1192),(512,1408),(80,1192),(80,760). Keep reserved upper area empty, no pedestal. All six vertices fully visible, bottom is a sharp point, never a flat cropped edge. No glow, haze, shadow outside silhouette, labels or background. Actual transparent RGBA outside artwork. One tile only.",
+  "files": [
+    {
+      "name": "Ocean",
+      "assignment": 2,
+      "reference": "hexOceanCalm00.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-f9057a85-46e5-46ad-9354-37cf131244cd.png",
+      "file": "Assignment2/Ocean_01.png"
+    },
+    {
+      "name": "Grassland",
+      "assignment": 2,
+      "reference": "hexPlainsCold00 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-0676cb64-8195-4706-9f6a-52be0fc7eb25.png",
+      "file": "Assignment2/Grassland_01.png"
+    },
+    {
+      "name": "Prairie",
+      "assignment": 2,
+      "reference": "hexDirt01 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-04cadd17-8236-4675-888b-698f859b20a2.png",
+      "file": "Assignment2/Prairie_01.png"
+    },
+    {
+      "name": "Savanna",
+      "assignment": 2,
+      "reference": "hexDesertRedGrass01 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-0d81d44c-c37d-4209-a7c9-364115f65cd8.png",
+      "file": "Assignment2/Savanna_01.png"
+    },
+    {
+      "name": "Plain",
+      "assignment": 2,
+      "reference": "hexTropicalPlains00 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-0b9463be-949e-4865-a5ca-1488aad7c0f4.png",
+      "file": "Assignment2/Plain_01.png"
+    },
+    {
+      "name": "Tundra",
+      "assignment": 2,
+      "reference": "hexPlainsColdSnowTransition02 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-2fc9f5c1-6a1f-4af9-badf-476b1232fe93.png",
+      "file": "Assignment2/Tundra_01.png"
+    },
+    {
+      "name": "Desert",
+      "assignment": 2,
+      "reference": "hexDesertYellowCactiForest00 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-c575d295-0333-479c-8a50-b65eec2b47f3.png",
+      "file": "Assignment2/Desert_01.png"
+    },
+    {
+      "name": "Swamp",
+      "assignment": 2,
+      "reference": "hexWetlands00 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-961666f4-bd7e-4b71-a07f-01db22c7665e.png",
+      "file": "Assignment2/Swamp_01.png"
+    },
+    {
+      "name": "Arctic",
+      "assignment": 2,
+      "reference": "hexSnowField00 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-bde3fa0f-e7e4-4763-806e-718ffed593ed.png",
+      "file": "Assignment2/Arctic_01.png"
+    },
+    {
+      "name": "Hills",
+      "assignment": 2,
+      "reference": "hexHills01.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-1c624265-8b31-447e-a531-727db2b7eff2.png",
+      "file": "Assignment2/Hills_01.png"
+    },
+    {
+      "name": "Mountains",
+      "assignment": 2,
+      "reference": "hexMountain00 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-e9a457ba-67b8-4dea-b4e6-59889014ee54.png",
+      "file": "Assignment2/Mountains_01.png"
+    },
+    {
+      "name": "ConiferForest",
+      "assignment": 3,
+      "reference": "hexForestPine00 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-823d5560-6f28-4edd-b092-085e7ddb00bb.png",
+      "file": "Assignment3/ConiferForest_01.png"
+    },
+    {
+      "name": "BroadleafForest",
+      "assignment": 3,
+      "reference": "hexForestBroadleaf00.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-507ba3a4-f513-4b2d-8952-757fdf6c6401.png",
+      "file": "Assignment3/BroadleafForest_01.png"
+    },
+    {
+      "name": "SavannaWoodland",
+      "assignment": 3,
+      "reference": "hexDesertRedForest01 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-8e4042a6-7059-4dbb-9491-e0db0a263f6d.png",
+      "file": "Assignment3/SavannaWoodland_01.png"
+    },
+    {
+      "name": "MixedForest",
+      "assignment": 3,
+      "reference": "hexWoodlands01.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-62272125-aee0-4a44-972b-84e8965ff2c7.png",
+      "file": "Assignment3/MixedForest_01.png"
+    },
+    {
+      "name": "BorealForest",
+      "assignment": 3,
+      "reference": "hexForestPineSnowTransition01.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-3c48a596-d6c9-447e-aec9-25aaa8948771.png",
+      "file": "Assignment3/BorealForest_01.png"
+    },
+    {
+      "name": "ScrubForest",
+      "assignment": 3,
+      "reference": "hexDesertYellowCactiForest00 1.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-f8c12775-ea5b-4da0-b244-b5656f7fbbdf.png",
+      "file": "Assignment3/ScrubForest_01.png"
+    },
+    {
+      "name": "TropicalRainforest",
+      "assignment": 3,
+      "reference": "hexJungle01.png",
+      "source": "C:\\Users\\idnon\\.codex\\generated_images\\01a13464-dbab-7143-8195-772c756906c8\\exec-3ce9f76f-b6e5-47a0-a151-50583c611d67.png",
+      "file": "Assignment3/TropicalRainforest_01.png"
+    }
+  ]
+}

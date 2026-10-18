@@ -1,0 +1,494 @@
+{
+  "status": "PASSED_WITH_ALPHA_TOLERANCE",
+  "count": 18,
+  "checks": "PNG decoding, RGBA, 1024x1536, corner alpha <=1/255, nonempty near-opaque artwork; no resampling or image edits performed. No Unity import/tiling validation performed.",
+  "alpha_note": "The initial exact-zero-corner check detected alpha=1 in the lower-left corner of Grassland, Ocean, ConiferForest, MixedForest and ScrubForest. The source files are preserved. Remaining corners are alpha=0. All images contain alpha=0 background and near-opaque artwork (maximum alpha=254). This is 8-bit alpha rounding tolerance, not a claim of exact binary masks.",
+  "files": [
+    {
+      "name": "Ocean",
+      "file": "Assignment2/Ocean_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        263,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "7096eefc942f113d9aabe0dcd94ca19b2e0bc391cafb64e19650da38b682e2b4"
+    },
+    {
+      "name": "Grassland",
+      "file": "Assignment2/Grassland_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        139,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "dd3f1378626422bebc95d4ddb82b45ec94f4511f0603733cf4385ce532de4e90"
+    },
+    {
+      "name": "Prairie",
+      "file": "Assignment2/Prairie_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        37,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "fbb893fc76dd1b1d4be538b461f98078d86e11c841e05d40e7664ab405822fd7"
+    },
+    {
+      "name": "Savanna",
+      "file": "Assignment2/Savanna_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        39,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "ab0299f4c195df61e75d3d0817bf6b698467c35330fbb514dc6185e12fed13c7"
+    },
+    {
+      "name": "Plain",
+      "file": "Assignment2/Plain_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        103,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "aab9c8a9ecb23ea718ce88f457193512d3c8ea52ac789e32066e9438868241e0"
+    },
+    {
+      "name": "Tundra",
+      "file": "Assignment2/Tundra_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        39,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "589dd57ad8e63edb6e10e6daf40ff526771f5862e9d6254ce1c8a61449789f6c"
+    },
+    {
+      "name": "Desert",
+      "file": "Assignment2/Desert_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        103,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "e3a4ceefef932cd577eb38af901a76855e46e2f164908fa48a757ffbd2beec60"
+    },
+    {
+      "name": "Swamp",
+      "file": "Assignment2/Swamp_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        185,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "4292f9af60518ef149ca5a8a79dc7a38bf8b605a820d1cefc58cd6465e3e2e5c"
+    },
+    {
+      "name": "Arctic",
+      "file": "Assignment2/Arctic_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        462,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "bc98134635b0137dfbb2ce096923febb77731b5fc88a8e3080fadcd12060b8b6"
+    },
+    {
+      "name": "Hills",
+      "file": "Assignment2/Hills_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        175,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "f422ec4215b2ba19499d844853a79a35cd13e26a5a181676b434bd802be1c5ee"
+    },
+    {
+      "name": "Mountains",
+      "file": "Assignment2/Mountains_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        85,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "7c91c7c968321f98cd61d9e6d0a678fa59196d67c10d37201b2469644798c749"
+    },
+    {
+      "name": "ConiferForest",
+      "file": "Assignment3/ConiferForest_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        35,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "c634e09f27eadb035ecb412d11b0dd781e6d3aedcba6484140b19b5469e51161"
+    },
+    {
+      "name": "BroadleafForest",
+      "file": "Assignment3/BroadleafForest_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        65,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "9947f1fe24208595a8e71b21e7b7b44995c30a9a5606feb3350d19e6bcc08d7f"
+    },
+    {
+      "name": "SavannaWoodland",
+      "file": "Assignment3/SavannaWoodland_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        51,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "0c09bbaabe6b74b2c6785a8b988fb5c8f4814a2f968a41df34883fb5b2199a6d"
+    },
+    {
+      "name": "MixedForest",
+      "file": "Assignment3/MixedForest_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        19,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "a6fc53f0e7569fd7ea983bd38367d68dc942b6bab0120b7f4e999a35570a8021"
+    },
+    {
+      "name": "BorealForest",
+      "file": "Assignment3/BorealForest_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        33,
+        1023,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "cad4e3349fa052d00f70654b8733dc3c70a0ee255cc3c86d6452f4c13bb68b60"
+    },
+    {
+      "name": "ScrubForest",
+      "file": "Assignment3/ScrubForest_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        48,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "fd3d27c96eb08c4e167c12b477e1f2ea89d1960d21997ad101ba0289f8dfd08b"
+    },
+    {
+      "name": "TropicalRainforest",
+      "file": "Assignment3/TropicalRainforest_01.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        25,
+        1024,
+        1536
+      ],
+      "corner_alpha_values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "corner_alpha_maximum_one": true,
+      "sha256": "5d9599c589ed78255dd3895b88e24c1d2e49e85ec056166f47070c28044088e2"
+    }
+  ]
+}

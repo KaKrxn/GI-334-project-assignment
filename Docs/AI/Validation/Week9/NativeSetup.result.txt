@@ -1,0 +1,3 @@
+PASSED
+Sixteen 120x120 StockSlots, 64px icons and draggable stock, 42pt warehouse amounts, 128px ShipInPortIcon, 420x160 ship grid and 450x80 cargo panel with six 64px slots. References saved natively in Map01, existing objects/GUIDs retained; original footer exit retained inactive and header EXIT available.
+Existing project sprites only; cargo-content icons/unloading and Europe trading remain later milestones.

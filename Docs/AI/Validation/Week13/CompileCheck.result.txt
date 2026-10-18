@@ -1,0 +1,6 @@
+PASSED
+Runtime and Editor C# sources compiled against the installed Unity assembly references; both compiler invocations returned exit 0 after the final presentation changes on 2026-10-14.
+Command: bundled Python compile_week3.py | Select-String 'exit [0-9]|error '
+Assembly-CSharp exit 0
+Assembly-CSharp-Editor exit 0
+Expected CS0649 warnings refer to serialized private references wired by Unity. Native Unity imports, setup and the final Play Mode run also passed. No standalone player build was produced.

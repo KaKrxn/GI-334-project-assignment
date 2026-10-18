@@ -54,7 +54,7 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.instance != null && GameManager.instance.TownPanelOpen) return;
+        if (GameManager.instance != null && GameManager.instance.MapInputBlocked) return;
         MoveByKB();
         ZoomInOut();
     }

@@ -1,0 +1,3 @@
+PASSED
+MainMenu and SelectNation saved through native Unity APIs; NationCard prefab, five European faction toggles, exclusive selection, New Game/Back/Start/Exit wiring, existing Art Deco sprites with manual crops/borders, and MainMenu > SelectNation > Map01 build order.
+Leader portraits are unavailable: existing faction shields are temporary proxies. Load Game/Option remain disabled placeholders; no save/options mechanics or Week 9 production changes.
